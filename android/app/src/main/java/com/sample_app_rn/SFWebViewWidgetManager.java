@@ -34,10 +34,6 @@ public class SFWebViewWidgetManager extends ViewGroupManager<SFWebViewWidgetWrap
         return new SFWebViewWidgetWrapper(themedReactContext);
     }
 
-    @ReactProp(name = "widgetId")
-    public void setWidgetId(SFWebViewWidgetWrapper widget, String widgetId) {
-        widget.widgetId = widgetId;
-    }
 
     @Override
     public void receiveCommand(@NonNull SFWebViewWidgetWrapper root, String commandId, @Nullable ReadableArray args) {
@@ -47,7 +43,8 @@ public class SFWebViewWidgetManager extends ViewGroupManager<SFWebViewWidgetWrap
         if (commandIdInt == COMMAND_CREATE) {
             assert args != null;
             String widgetId = args.getString(0);
-            root.initialize(widgetId);
+            int widgetIndex = args.getInt(1);
+            root.initialize(widgetId, widgetIndex);
         }
     }
 
@@ -56,38 +53,4 @@ public class SFWebViewWidgetManager extends ViewGroupManager<SFWebViewWidgetWrap
     public Map<String, Integer> getCommandsMap() {
         return MapBuilder.of("create", COMMAND_CREATE);
     }
-
-//    @Override
-//    protected SFWebViewWidgetFlutter createViewInstance(ThemedReactContext reactContext) {
-//        String widgetId = "";
-//        String URL = "https://mobile-demo.outbrain.com";
-//        int widgetIndex = 0;
-//        String extId = "extId";
-//        String extSecondaryId = "extSecondaryId";
-//        String pubImpId = "pubImpId";
-//        boolean darkmode = false;
-//        String installationKey = "NANOWDGT01";
-//        SFWebViewClickListenerFlutter clickListener = new SFWebViewClickListenerFlutter() {
-//            @Override
-//            public void didChangeHeight(int newHeight) {
-//
-//            }
-//
-//            @Override
-//            public void onRecClick(String url) {
-//
-//            }
-//
-//            @Override
-//            public void onOrganicClick(String url) {
-//
-//            }
-//        };
-//        SFWebViewEventsListener eventListener = (eventName, additionalData) -> {
-//
-//        };
-//        SFWebViewWidgetFlutter view = new SFWebViewWidgetFlutter(reactContext, URL, widgetId, widgetIndex, installationKey, clickListener, eventListener, darkmode, extId, extSecondaryId, pubImpId);
-//        return view;
-//    }
-
 }

@@ -2,7 +2,6 @@ package com.sample_app_rn;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.outbrain.OBSDK.SFWebView.SFWebViewClickListenerFlutter;
@@ -14,10 +13,10 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
     public String widgetId;
     public SFWebViewWidgetWrapper(Context context) {
         super(context);
-        setBackgroundColor(Color.RED); // For debugging, remove in productio
+        setBackgroundColor(Color.LTGRAY); // For debugging, remove in productio
     }
 
-    public void initialize(String widgetId) {
+    public void initialize(String widgetId, int widgetIndex) {
         post(() -> {
             // Rest of your initialization code
             // ...
@@ -26,7 +25,6 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
             requestLayout();
         });
         String URL = "https://mobile-demo.outbrain.com";
-        int widgetIndex = 0;
         String extId = "extId";
         String extSecondaryId = "extSecondaryId";
         String pubImpId = "pubImpId";
@@ -73,19 +71,4 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
         }
     }
 
-//    @Override
-//    protected void onAttachedToWindow() {
-//        super.onAttachedToWindow();
-//        if (widget != null) {
-//            widget.onAttachedToWindow();
-//        }
-//    }
-//
-//    @Override
-//    protected void onDetachedFromWindow() {
-//        super.onDetachedFromWindow();
-//        if (widget != null) {
-//            widget.onDetachedFromWindow();
-//        }
-//    }
 }

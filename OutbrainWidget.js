@@ -5,16 +5,17 @@ const NativeOutbrainWidget = requireNativeComponent('OutbrainWidget');
 
 export default class OutbrainWidget extends React.Component {
   componentDidMount() {
-    const { widgetId } = this.props;
+    const { widgetId, widgetIndex } = this.props;
     const viewId = findNodeHandle(this._outbrainWidget);
     UIManager.dispatchViewManagerCommand(
       viewId,
       UIManager.getViewManagerConfig('OutbrainWidget').Commands.create.toString(),
-      [widgetId]
+      [widgetId, widgetIndex]
     );
   }
 
   render() {
-    return <NativeOutbrainWidget ref={ref => (this._outbrainWidget = ref)} />;
+    return <NativeOutbrainWidget style={{height: 800}} ref={ref => (this._outbrainWidget = ref)} />;
   }
 }
+

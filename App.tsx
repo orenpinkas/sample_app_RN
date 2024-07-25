@@ -8,7 +8,7 @@ import ArticleScreen from './Article';
 
 const App = () =>
  <ArticleScreen>
-    <OutbrainWidget  style={{height: 400, width: 400}} widgetId="MB_2"/>
+    <OutbrainWidget widgetId="MB_2" widgetIndex={0} />
 </ArticleScreen>;
 
 

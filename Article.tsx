@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
 
+import OutbrainWidget from './OutbrainWidget';
+
 const ArticleScreen = ({children}) => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.childOfContainer}>
@@ -29,10 +31,16 @@ const ArticleScreen = ({children}) => {
                     bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
                     faucibus orci ligula eget mi.
                 </Text>
-                {/* Placeholder for Outbrain widget */}
                 <View>
                     {children}
                 </View>
+                <Text style={styles.content}>
+                    Paragraph 3: Donec vehicula turpis nec ex venenatis, vel maximus velit
+                    consectetur. Curabitur at enim ac risus pharetra gravida. Sed
+                    bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
+                    faucibus orci ligula eget mi.
+                </Text>
+                <OutbrainWidget widgetId="MB_1" widgetIndex={1}/>
             </View>
         </ScrollView>
     );

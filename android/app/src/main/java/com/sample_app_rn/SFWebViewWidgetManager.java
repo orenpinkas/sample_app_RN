@@ -5,17 +5,8 @@ import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.common.MapBuilder;
-import com.facebook.react.uimanager.ReactStylesDiffMap;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ViewGroupManager;
-import com.facebook.react.uimanager.annotations.ReactProp;
-import com.outbrain.OBSDK.SFWebView.SFWebViewClickListenerFlutter;
-import com.outbrain.OBSDK.SFWebView.SFWebViewEventsListener;
-import com.outbrain.OBSDK.SFWebView.SFWebViewWidget;
-import com.outbrain.OBSDK.SFWebView.SFWebViewWidgetFlutter;
-
-import org.json.JSONObject;
 
 import java.util.Map;
 

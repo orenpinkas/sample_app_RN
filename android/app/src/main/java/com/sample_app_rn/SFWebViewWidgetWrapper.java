@@ -1,18 +1,24 @@
 package com.sample_app_rn;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.view.ViewGroup;
 
+import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.ReactContext;
+import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.outbrain.OBSDK.SFWebView.SFWebViewClickListenerFlutter;
 import com.outbrain.OBSDK.SFWebView.SFWebViewEventsListener;
 import com.outbrain.OBSDK.SFWebView.SFWebViewWidgetFlutter;
 
 public class SFWebViewWidgetWrapper extends ViewGroup {
     SFWebViewWidgetFlutter widget;
-    public String widgetId;
-    public SFWebViewWidgetWrapper(Context context) {
+    ReactContext context;
+
+    public SFWebViewWidgetWrapper(ReactContext context) {
         super(context);
+        this.context = context;
         setBackgroundColor(Color.LTGRAY); // For debugging, remove in productio
     }
 
@@ -33,12 +39,18 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
         SFWebViewClickListenerFlutter clickListener = new SFWebViewClickListenerFlutter() {
             @Override
             public void didChangeHeight(int newHeight) {
-
+                WritableMap params = Arguments.createMap();
+                params.putString("name", "didChangeHeight");
+                params.putInt("height", newHeight);
+                emitEvent(widgetId, params);
             }
 
             @Override
             public void onRecClick(String url) {
-
+                WritableMap params = Arguments.createMap();
+                params.putString("name", "onRecClick");
+                params.putString("url", "");
+                emitEvent(widgetId, params);
             }
 
             @Override
@@ -55,6 +67,12 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
                 ViewGroup.LayoutParams.WRAP_CONTENT
         ));
     }
+
+    public void emitEvent(String widgetId, ReadableMap params) {
+        context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                .emit(widgetId, params);
+    }
+
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         // Layout the child view

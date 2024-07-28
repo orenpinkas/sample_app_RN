@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.ViewGroupManager;
 import java.util.Map;
 
 public class SFWebViewWidgetManager extends ViewGroupManager<SFWebViewWidgetWrapper> {
-    public static final String REACT_CLASS = "OutbrainWidget";
+    public static final String REACT_CLASS = "SFWidget";
     public static final int COMMAND_CREATE = 1;
 
     @Override

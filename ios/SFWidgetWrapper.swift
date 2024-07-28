@@ -15,7 +15,6 @@ import OutbrainSDK
 class SFWidgetWrapper: UIView, SFWidgetDelegate {
     
   var sfWidget: SFWidget!
-  @objc var widgetIdTest: String = ""
 
   // MARK: - Initializers
   
@@ -30,9 +29,6 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
         sfWidget.trailingAnchor.constraint(equalTo: trailingAnchor),
         sfWidget.bottomAnchor.constraint(equalTo: bottomAnchor)
     ])
-    configure()
-    backgroundColor = .red
-    print("widgetIdTest ", widgetIdTest)
   }
   
   // This initializer is required, but we can make it unavailable
@@ -42,12 +38,13 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   // MARK: - Setup
   
-  @objc func configure() {
-    print("widgetIdTest ", widgetIdTest)
+  @objc func create(widgetId: String, widgetIndex: NSInteger) {
+    configure(widgetId: widgetId, widgetIndex: widgetIndex)
+  }
+  
+  private func configure(widgetId: String, widgetIndex: NSInteger) {
     let url = "https://mobile-demo.outbrain.com"
-    let widgetId = "MB_2"
     let parterKey = "NANOWDGT01"
-    let widgetIndex = 0
     Outbrain.initializeOutbrain(withPartnerKey: parterKey)
     SFWidget.infiniteWidgetsOnTheSamePage = true
     sfWidget.enableEvents()
@@ -96,12 +93,12 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   
   func onRecClick(_ url: URL) {
       print("Swift - OnRecClick", url)
-    print("widgetIdTest \(self.widgetIdTest)")
+    print("widgetIdTest")
 
   }
   
   func didChangeHeight(_ newHeight: CGFloat) {
-      print("Height of SFWidget \(self.widgetIdTest) is \(newHeight)")
+      print("Height of SFWidget is \(newHeight)")
       
   }
   

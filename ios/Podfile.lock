@@ -7,6 +7,7 @@ PODS:
   - hermes-engine (0.74.3):
     - hermes-engine/Pre-built (= 0.74.3)
   - hermes-engine/Pre-built (0.74.3)
+  - OutbrainSDK (5.0.11-beta)
   - RCT-Folly (2024.01.01.00):
     - boost
     - DoubleConversion
@@ -1174,6 +1175,7 @@ DEPENDENCIES:
   - fmt (from `../node_modules/react-native/third-party-podspecs/fmt.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
+  - OutbrainSDK (= 5.0.11-beta)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
@@ -1227,6 +1229,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - OutbrainSDK
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -1347,6 +1350,7 @@ SPEC CHECKSUMS:
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
   glog: fdfdfe5479092de0c4bdbebedd9056951f092c4f
   hermes-engine: 1f547997900dd0752dc0cc0ae6dd16173c49e09b
+  OutbrainSDK: f77fe7e61d5ada458c36f683e7d48dd3ce47e11c
   RCT-Folly: 02617c592a293bd6d418e0a88ff4ee1f88329b47
   RCTDeprecation: 4c7eeb42be0b2e95195563c49be08d0b839d22b4
   RCTRequired: d530a0f489699c8500e944fde963102c42dcd0c2
@@ -1397,6 +1401,6 @@ SPEC CHECKSUMS:
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: 88480008ccacea6301ff7bf58726e27a72931c8d
 
-PODFILE CHECKSUM: 1650905db8c2c7ba4a6c770a84fcd0ed7b83cb2d
+PODFILE CHECKSUM: c2ea38d8eac43ffcd850d1ee00505c238ca515c0
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

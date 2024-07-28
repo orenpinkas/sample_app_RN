@@ -2,8 +2,9 @@ import React from 'react';
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
 
 import OutbrainWidget from './OutbrainWidget';
+import MapView from './OutbrainWidgetIOS';
 
-const ArticleScreen = ({children}) => {
+const ArticleScreen = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.childOfContainer}>
             <Image
@@ -31,16 +32,14 @@ const ArticleScreen = ({children}) => {
                     bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
                     faucibus orci ligula eget mi.
                 </Text>
-                <View>
-                    {children}
-                </View>
+                <MapView style={{ width: 400, height: 300 }} />
                 <Text style={styles.content}>
                     Paragraph 3: Donec vehicula turpis nec ex venenatis, vel maximus velit
                     consectetur. Curabitur at enim ac risus pharetra gravida. Sed
                     bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
                     faucibus orci ligula eget mi.
                 </Text>
-                <OutbrainWidget widgetId="MB_1" widgetIndex={1}/>
+                {/* <OutbrainWidget widgetId="MB_1" widgetIndex={1}/> */}
             </View>
         </ScrollView>
     );

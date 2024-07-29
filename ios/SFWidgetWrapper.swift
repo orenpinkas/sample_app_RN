@@ -86,7 +86,7 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
     print("Swift - OnRecClick", url)
     let args: [String: Any] = [
       "widgetId": widgetId!,
-      "url": url
+      "url": url.absoluteString
     ]
     self.OBEventModuleInstance.sendWidgetEvent("onRecClick", withArgs: args)
   }
@@ -104,7 +104,7 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
     print("Swift - onOrganicRecClick")
     let args: [String: Any] = [
       "widgetId": widgetId!,
-      "url": url
+      "url": url.absoluteString
     ]
     self.OBEventModuleInstance.sendWidgetEvent("onOrganicRecClick", withArgs: args )
   }

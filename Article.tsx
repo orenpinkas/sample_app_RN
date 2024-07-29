@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
-
 import OutbrainWidget from './OutbrainWidget';
 
 const ArticleScreen = () => {
@@ -45,12 +44,12 @@ const ArticleScreen = () => {
                     bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
                     faucibus orci ligula eget mi.
                 </Text>
-                {/* <OutbrainWidget
+                <OutbrainWidget
                     widgetId="MB_1"
-                    widgetIndex={1}
+                    widgetIndex={0}
                     articleUrl="https://mobile-demo.outbrain.com"
                     partnerKey="NANOWDGT01"
-                    extSecondaryId="_ext_scnd_mb_1"/> */}
+                    handler={{}}/>
             </View>
         </ScrollView>
     );

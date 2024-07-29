@@ -31,14 +31,26 @@ const ArticleScreen = () => {
                     bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
                     faucibus orci ligula eget mi.
                 </Text>
-                <OutbrainWidget widgetId="MB_2" widgetIndex={0} style={{ width: 400, height: 800 }} />
+                <OutbrainWidget
+                    widgetId="MB_2"
+                    widgetIndex={0}
+                    articleUrl="https://mobile-demo.outbrain.com"
+                    partnerKey="NANOWDGT01"
+                    extId="ext_mb_2"
+                    extSecondaryId="_ext_scnd_mb_2"
+                    pubImpId="pub_mb_2"/>
                 <Text style={styles.content}>
                     Paragraph 3: Donec vehicula turpis nec ex venenatis, vel maximus velit
                     consectetur. Curabitur at enim ac risus pharetra gravida. Sed
                     bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
                     faucibus orci ligula eget mi.
                 </Text>
-                <OutbrainWidget widgetId="MB_1" widgetIndex={1} style={{ width: 400, height: 600 }} />
+                <OutbrainWidget
+                    widgetId="MB_1"
+                    widgetIndex={1}
+                    articleUrl="https://mobile-demo.outbrain.com"
+                    partnerKey="NANOWDGT01"
+                    extSecondaryId="_ext_scnd_mb_1"/>
             </View>
         </ScrollView>
     );

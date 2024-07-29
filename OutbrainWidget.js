@@ -19,7 +19,7 @@ export default class OutbrainWidget extends React.Component {
         super(props);
         this.widgetId = props.widgetId;
         this.state = {
-            height: 200,
+            height: 0,
         };
         eventEmitter = new NativeEventEmitter(NativeModules.OBEventModule);
         // eventEmitter.addListener(props.widgetId, (event) => {
@@ -39,12 +39,12 @@ export default class OutbrainWidget extends React.Component {
     }
 
     componentDidMount() {
-        const {widgetId, widgetIndex} = this.props;
+        const {widgetId, widgetIndex, articleUrl, partnerKey, extId, extSecondaryId, pubImpId} = this.props;
         const viewId = findNodeHandle(this._outbrainWidget);
         UIManager.dispatchViewManagerCommand(
         viewId,
         createCommandKey,
-        [widgetId, widgetIndex]
+        [{widgetId, widgetIndex, articleUrl, partnerKey, extId, extSecondaryId, pubImpId}]
         );
     }
 

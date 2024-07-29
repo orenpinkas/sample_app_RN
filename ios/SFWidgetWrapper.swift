@@ -40,18 +40,42 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   // MARK: - Setup
   
-  @objc func create(widgetId: String, widgetIndex: NSInteger) {
+//  @objc func create(widgetId: String, widgetIndex: NSInteger, articleUrl: String, partnerKey: String, extId: String?, extSecondaryId: String?, pubImpId: String?){
+//    self.widgetId = widgetId
+//    configure(widgetId: widgetId, widgetIndex: widgetIndex, articleUrl: articleUrl, partnerKey: partnerKey, extId: extId, extSecondaryId: extSecondaryId, pubImpId: pubImpId)
+//  }
+  
+  @objc func create(args: [String: Any]) {
+    guard let widgetId = args["widgetId"] as? String else {
+      print("widgetId is missing")
+      return
+    }
     self.widgetId = widgetId
-    configure(widgetId: widgetId, widgetIndex: widgetIndex)
+    configure(args:args);
   }
   
-  private func configure(widgetId: String, widgetIndex: NSInteger) {
-    let url = "https://mobile-demo.outbrain.com"
-    let parterKey = "NANOWDGT01"
-    Outbrain.initializeOutbrain(withPartnerKey: parterKey)
+  private func configure(args: [String: Any]) {
+    guard let widgetId = args["widgetId"] as? String,
+          let widgetIndex = args["widgetIndex"] as? Int,
+          let articleUrl = args["articleUrl"] as? String,
+          let partnerKey = args["partnerKey"] as? String else {
+      print("Required keys are missing")
+      return
+    }
+    
+    let extId = args["extId"] as? String
+    let extSecondaryId = args["extSecondaryId"] as? String
+    let pubImpId = args["pubImpId"] as? String
+    
+    Outbrain.initializeOutbrain(withPartnerKey: partnerKey)
+    sfWidget.extId = extId
+    sfWidget.extSecondaryId = extSecondaryId
+    sfWidget.OBPubImp = pubImpId
+    
     SFWidget.infiniteWidgetsOnTheSamePage = true
     sfWidget.enableEvents()
-    sfWidget.configure(with: self, url: url, widgetId: widgetId, widgetIndex: widgetIndex, installationKey: parterKey, userId: nil, darkMode: false, isSwiftUI: true)
+    
+    sfWidget.configure(with: self, url: articleUrl, widgetId: widgetId, widgetIndex: widgetIndex, installationKey: partnerKey, userId: nil, darkMode: false, isSwiftUI: true)
   }
     
 //  private func configure(args: Any?) {

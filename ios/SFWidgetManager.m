@@ -1,14 +1,11 @@
-#import <MapKit/MapKit.h>
-
-#import <React/RCTViewManager.h>
-
-#import <OutbrainSDK/OutbrainSDK.h>
-
-#import "sample_app_RN-Swift.h"
 
 #import <React/RCTViewManager.h>
 #import <React/RCTUIManager.h>
 #import <React/RCTLog.h>
+
+#import <OutbrainSDK/OutbrainSDK.h>
+
+#import "sample_app_RN-Swift.h"
 
 @interface SFWidgetManager : RCTViewManager
 @end

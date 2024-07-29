@@ -11,6 +11,7 @@
 		0BA819692C529D54005D36E3 /* SFWidgetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA819682C529D53005D36E3 /* SFWidgetManager.m */; };
 		0BA8196C2C562AA9005D36E3 /* SFWidgetWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8196B2C562AA9005D36E3 /* SFWidgetWrapper.swift */; };
 		0BA819742C5634A7005D36E3 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BA819732C5634A7005D36E3 /* AppDelegate.mm */; };
+		0BA819792C568D8D005D36E3 /* OBEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA819782C568D8D005D36E3 /* OBEventModule.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-sample_app_RN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-sample_app_RN.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -38,6 +39,8 @@
 		0BA8196B2C562AA9005D36E3 /* SFWidgetWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFWidgetWrapper.swift; sourceTree = "<group>"; };
 		0BA819722C56349F005D36E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = sample_app_RN/AppDelegate.h; sourceTree = "<group>"; };
 		0BA819732C5634A7005D36E3 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = sample_app_RN/AppDelegate.mm; sourceTree = "<group>"; };
+		0BA819782C568D8D005D36E3 /* OBEventModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OBEventModule.m; sourceTree = "<group>"; };
+		0BA8197A2C568FD8005D36E3 /* OBEventModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OBEventModule.h; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* sample_app_RN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample_app_RN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = sample_app_RN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = sample_app_RN/Info.plist; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				0BA819722C56349F005D36E3 /* AppDelegate.h */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				0BA819682C529D53005D36E3 /* SFWidgetManager.m */,
+				0BA819782C568D8D005D36E3 /* OBEventModule.m */,
+				0BA8197A2C568FD8005D36E3 /* OBEventModule.h */,
 				0BA8196B2C562AA9005D36E3 /* SFWidgetWrapper.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
@@ -409,6 +414,7 @@
 				0BA819692C529D54005D36E3 /* SFWidgetManager.m in Sources */,
 				0BA8196C2C562AA9005D36E3 /* SFWidgetWrapper.swift in Sources */,
 				0BA819742C5634A7005D36E3 /* AppDelegate.mm in Sources */,
+				0BA819792C568D8D005D36E3 /* OBEventModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +504,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = sample_app_RN;
-				SWIFT_OBJC_BRIDGING_HEADER = "sample_app_RN-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/orenpinkas/Projects/outbrain/React-Native/sample_app_RN/ios/sample_app_RN-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -525,7 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = sample_app_RN;
-				SWIFT_OBJC_BRIDGING_HEADER = "sample_app_RN-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/orenpinkas/Projects/outbrain/React-Native/sample_app_RN/ios/sample_app_RN-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

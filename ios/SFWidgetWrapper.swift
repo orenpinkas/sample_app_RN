@@ -15,6 +15,8 @@ import OutbrainSDK
 class SFWidgetWrapper: UIView, SFWidgetDelegate {
     
   var sfWidget: SFWidget!
+  let OBEventModuleInstance = OBEventModule()
+  var widgetId: String?
 
   // MARK: - Initializers
   
@@ -39,6 +41,7 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   // MARK: - Setup
   
   @objc func create(widgetId: String, widgetIndex: NSInteger) {
+    self.widgetId = widgetId
     configure(widgetId: widgetId, widgetIndex: widgetIndex)
   }
   
@@ -92,19 +95,22 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   
   func onRecClick(_ url: URL) {
-      print("Swift - OnRecClick", url)
+    print("Swift - OnRecClick", url)
     print("widgetIdTest")
 
   }
   
   func didChangeHeight(_ newHeight: CGFloat) {
-      print("Height of SFWidget is \(newHeight)")
-      
+    print("Height of SFWidget is \(newHeight)")
+    let args: [String: Any] = [
+      "widgetId": widgetId,
+      "height": newHeight
+    ]
+    self.OBEventModuleInstance.sendWidgetEvent("didChangeHeight", withArgs: args )
   }
   
   func onOrganicRecClick(_ url: URL) {
       print("Swift - onOrganicRecClick")
-      
   }
   
   func widgetEvent(_ eventName: String, additionalData: [String : Any]) {

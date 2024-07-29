@@ -17,10 +17,11 @@ export default class OutbrainWidget extends React.Component {
 
     constructor(props) {
         super(props);
+        this.widgetId = props.widgetId;
         this.state = {
             height: 200,
         };
-        // eventEmitter = new NativeEventEmitter(NativeModules.SFWidgetEventsModule);
+        eventEmitter = new NativeEventEmitter(NativeModules.OBEventModule);
         // eventEmitter.addListener(props.widgetId, (event) => {
         //     console.log(`Received event from widget ${props.widgetId}: ${event.name}`);
         //     switch (event.name) {
@@ -29,6 +30,12 @@ export default class OutbrainWidget extends React.Component {
         //             break;
         //     }
         // });
+        eventEmitter.addListener("didChangeHeight", (event) => {
+            console.log(`Received event from widget ${event.widgetId}. event.widgetId === props.widgetId: ${event.widgetId === props.widgetId}. event.height: ${event.height} type of event height: ${typeof event.height}`);
+            if (event.widgetId === props.widgetId) {
+                this.setState({height: event.height});
+            }
+        });
     }
 
     componentDidMount() {

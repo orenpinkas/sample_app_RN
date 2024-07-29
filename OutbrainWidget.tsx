@@ -7,14 +7,6 @@ const moduleName = 'SFWidget';  // This should be the name of the native view ma
 
 const NativeSFWidget = requireNativeComponent<NativeComponentProps>(moduleName);
 
-const createCommandKey = (() => {
-  if (Platform.OS === 'android') {
-    return UIManager.getViewManagerConfig(moduleName).Commands.create.toString();
-  } else {
-    return 'create';
-  }
-})();
-
 export default class OutbrainWidget extends React.Component<OutbrainWidgetProps> {
     private _outbrainWidget: any;
     private eventEmitter: NativeEventEmitter;
@@ -27,74 +19,88 @@ export default class OutbrainWidget extends React.Component<OutbrainWidgetProps>
 
     constructor(props: OutbrainWidgetProps) {
         super(props);
-        // this.widgetId = props.widgetId;
-        console.log(props.handler)
+
         this.handler = props.handler === undefined ? DefaultHandler : props.handler;
-        console.log(this.handler)
         this.nativeCommandKey = this.#getNativeCommandKey();
         this.eventEmitter = new NativeEventEmitter(NativeModules.OBEventModule);
-        this.applyEventHandler = this.applyEventHandler.bind(this);
+
         this.handleHeightChange = this.handleHeightChange.bind(this);
         this.handleRecClick = this.handleRecClick.bind(this);
         this.handleOrganicRecClick = this.handleOrganicRecClick.bind(this);
         this.handleWidgetEvent = this.handleWidgetEvent.bind(this);
-        // eventEmitter.addListener(props.widgetId, (event) => {
-        //     console.log(`Received event from widget ${props.widgetId}: ${event.name}`);
-        //     switch (event.name) {
-        //         case 'didChangeHeight':
-        //             this.setState({height: event.height});
-        //             break;
-        //     }
-        // });
     }
 
     componentDidMount() {
         const {widgetId, widgetIndex, articleUrl, partnerKey, extId, extSecondaryId, pubImpId} = this.props;
         const viewId = findNodeHandle(this._outbrainWidget);
+
+        // dispatch init command with widget properties
         UIManager.dispatchViewManagerCommand(
-        viewId,
-        this.nativeCommandKey,
-        [{widgetId, widgetIndex, articleUrl, partnerKey, extId, extSecondaryId, pubImpId}]
+            viewId,
+            this.nativeCommandKey,
+            [
+                {
+                    widgetId,
+                    widgetIndex,
+                    articleUrl,
+                    partnerKey,
+                    extId,
+                    extSecondaryId,
+                    pubImpId
+                }
+            ]
         );
 
-        this.eventEmitter.addListener("didChangeHeight", this.handleHeightChange);
-        this.eventEmitter.addListener("onRecClick", (event) => this.applyEventHandler(event, this.handleRecClick));
-        this.eventEmitter.addListener("onOrganicRecClick", this.handleOrganicRecClick);
-        this.eventEmitter.addListener("onWidgetEvent", this.handleWidgetEvent);
+        this.setupEventListeners();
+    }
+
+    setupEventListeners() {
+        const events = [
+            { name: "didChangeHeight", handler: this.handleHeightChange },
+            { name: "onRecClick", handler: this.handleRecClick },
+            { name: "onOrganicRecClick", handler: this.handleOrganicRecClick },
+            { name: "onWidgetEvent", handler: this.handleWidgetEvent }
+        ];
+
+        events.forEach(event => {
+            this.eventEmitter.addListener(event.name, event.handler);
+        });
+    }
+
+    removeEventListeners() {
+        const eventNames = ["didChangeHeight", "onRecClick", "onOrganicRecClick", "onWidgetEvent"];
+        eventNames.forEach(eventName => {
+            this.eventEmitter.removeAllListeners(eventName);
+        });
     }
 
     componentWillUnmount() {
-        this.eventEmitter.removeAllListeners("didChangeHeight");
-        this.eventEmitter.removeAllListeners("onRecClick");
-        this.eventEmitter.removeAllListeners("onOrganicRecClick");
-        this.eventEmitter.removeAllListeners("onWidgetEvent");
+        this.removeEventListeners();
     }
 
-        handleHeightChange(event: any) {
-        if (event.widgetId === this.props.widgetId) {
-            this.setState({ height: event.height });
-            this.handler.onHeightChange?.(event.height);
-        }
-    }
+    handleHeightChange(event: any) {
+        if (event.widgetId !== this.props.widgetId) return;
 
-    applyEventHandler(event: any, eventHandler: (event:any) => void) {
-        if (event.widgetId === this.props.widgetId) {
-            eventHandler(event);
-        }
+        this.setState({ height: event.height });
+        
+        this.handler.onHeightChange?.(event.height);
     }
 
     handleRecClick(event: any) {
-        console.log(`${this.props.widgetId}: Received event from widget ${event.widgetId} - onRecClick; url: ${event.url}`);
+        if (event.widgetId !== this.props.widgetId) return;
+
         this.handler.onRecClick?.(event.url);
     }
 
     handleOrganicRecClick(event: any) {
-        console.log(`Received event from widget ${event.widgetId} - onOrganicRecClick: ${event.url}`);
+        if (event.widgetId !== this.props.widgetId) return;
+
         this.handler.onOrganicClick?.(event.url);
     }
 
     handleWidgetEvent(event: any) {
-        // console.log(`Received event from widget ${event.widgetId} - ${event.eventName}, ${JSON.stringify(event.additionalData)}`);
+        if (event.widgetId !== this.props.widgetId) return;
+
         this.handler.onWidgetEvent?.(event.eventName, event.additionalData);
     }
 

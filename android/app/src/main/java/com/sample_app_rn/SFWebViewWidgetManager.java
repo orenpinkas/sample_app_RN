@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
@@ -33,9 +34,8 @@ public class SFWebViewWidgetManager extends ViewGroupManager<SFWebViewWidgetWrap
 
         if (commandIdInt == COMMAND_CREATE) {
             assert args != null;
-            String widgetId = args.getString(0);
-            int widgetIndex = args.getInt(1);
-            root.initialize(widgetId, widgetIndex);
+            ReadableMap arguments = args.getMap(0);
+            root.initialize(arguments);
         }
     }
 

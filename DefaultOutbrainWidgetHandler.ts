@@ -12,7 +12,7 @@ const DefaultHandler: OutbrainWidgetHandler = {
       OBInAppBrowser.open(url);
     },
     onWidgetEvent: (eventName, data) => {
-      console.log('Default Handler - onWidgetEvent');
+      console.log(`Default Handler - onWidgetEvent: ${eventName}`, data);
     }
 };
 

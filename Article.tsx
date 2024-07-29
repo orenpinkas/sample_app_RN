@@ -45,12 +45,12 @@ const ArticleScreen = () => {
                     bibendum, odio eget congue sodales, quam augue malesuada lorem, vel
                     faucibus orci ligula eget mi.
                 </Text>
-                <OutbrainWidget
+                {/* <OutbrainWidget
                     widgetId="MB_1"
                     widgetIndex={1}
                     articleUrl="https://mobile-demo.outbrain.com"
                     partnerKey="NANOWDGT01"
-                    extSecondaryId="_ext_scnd_mb_1"/>
+                    extSecondaryId="_ext_scnd_mb_1"/> */}
             </View>
         </ScrollView>
     );

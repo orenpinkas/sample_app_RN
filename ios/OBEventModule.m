@@ -25,7 +25,7 @@ RCT_EXPORT_MODULE();
 
 - (NSArray<NSString *> *)supportedEvents
 {
-  return @[@"didChangeHeight"]; // Add all event names you want to support
+  return @[@"didChangeHeight", @"onRecClick", @"onOrganicRecClick", @"onWidgetEvent"]; // Add all event names you want to support
 }
 
 // Will be called when this module's first listener is added.

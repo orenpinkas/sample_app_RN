@@ -16,7 +16,7 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
     
   var sfWidget: SFWidget!
   let OBEventModuleInstance = OBEventModule()
-  var widgetId: String?
+  var widgetId: String!
 
   // MARK: - Initializers
   
@@ -77,42 +77,6 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
     
     sfWidget.configure(with: self, url: articleUrl, widgetId: widgetId, widgetIndex: widgetIndex, installationKey: partnerKey, userId: nil, darkMode: false, isSwiftUI: true)
   }
-    
-//  private func configure(args: Any?) {
-//      if let argsDict = args as? [String: Any],
-//         let articleUrl = argsDict["articleUrl"] as? String,
-//         let widgetId = argsDict["widgetId"] as? String,
-//         let partnerKey = argsDict["partnerKey"] as? String,
-//         let widgetIndex = argsDict["widgetIndex"] as? Int {
-//          // extId and extSecondaryId are optional fields
-//          let extId = argsDict["extId"] as? String
-//          let extSecondaryId = argsDict["extSecondaryId"] as? String
-//          let pubImpId = argsDict["pubImpId"] as? String
-//          
-//          self.sfWidget.extId = extId
-//          self.sfWidget.extSecondaryId = extSecondaryId
-//          sfWidget.OBPubImp = pubImpId
-//          
-//          SFWidget.infiniteWidgetsOnTheSamePage = true
-//          SFWidget.setIsFlutter(value: true)
-//          
-//          self.widgetId = widgetId;
-//          
-//          self.sfWidget.enableEvents()
-//          self.sfWidget.configure(with: self,
-//                                  url: articleUrl,
-//                                  widgetId: widgetId,
-//                                  widgetIndex: widgetIndex,
-//                                  installationKey: partnerKey,
-//                                  userId: nil,
-//                                  darkMode: false,
-//                                  isSwiftUI: true
-//          )
-//      } else {
-//          // Handle the case where arguments are missing or of the wrong type
-//          print("Invalid or missing arguments")
-//      }
-//  }
   
   func view() -> UIView {
       return sfWidget
@@ -120,30 +84,39 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   
   func onRecClick(_ url: URL) {
     print("Swift - OnRecClick", url)
-    print("widgetIdTest")
-
+    let args: [String: Any] = [
+      "widgetId": widgetId!,
+      "url": url
+    ]
+    self.OBEventModuleInstance.sendWidgetEvent("onRecClick", withArgs: args)
   }
   
   func didChangeHeight(_ newHeight: CGFloat) {
     print("Height of SFWidget is \(newHeight)")
     let args: [String: Any] = [
-      "widgetId": widgetId,
+      "widgetId": widgetId!,
       "height": newHeight
     ]
     self.OBEventModuleInstance.sendWidgetEvent("didChangeHeight", withArgs: args )
   }
   
   func onOrganicRecClick(_ url: URL) {
-      print("Swift - onOrganicRecClick")
+    print("Swift - onOrganicRecClick")
+    let args: [String: Any] = [
+      "widgetId": widgetId!,
+      "url": url
+    ]
+    self.OBEventModuleInstance.sendWidgetEvent("onOrganicRecClick", withArgs: args )
   }
   
   func widgetEvent(_ eventName: String, additionalData: [String : Any]) {
       print("Swift - widgetEvent \(eventName)")
-      let arguments: [String: Any] = [
-          "eventName": eventName,
-          "additionalData": additionalData
+      let args: [String: Any] = [
+        "widgetId": widgetId!,
+        "eventName": eventName,
+        "additionalData": additionalData
       ]
-      
+    self.OBEventModuleInstance.sendWidgetEvent("onWidgetEvent", withArgs: args)
   }
 
 }

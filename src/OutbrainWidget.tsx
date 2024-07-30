@@ -83,24 +83,28 @@ export default class OutbrainWidget extends React.Component<OutbrainWidgetProps>
 
         this.setState({ height: event.height });
         
+        console.log(`${this.props.widgetId}; onHeightChange: ${event.height}`);
         this.handler.onHeightChange?.(event.height);
     }
 
     handleRecClick(event: any) {
         if (event.widgetId !== this.props.widgetId) return;
 
+        console.log(`${this.props.widgetId}; onRecClick`);
         this.handler.onRecClick?.(event.url);
     }
 
     handleOrganicRecClick(event: any) {
         if (event.widgetId !== this.props.widgetId) return;
 
+        console.log(`${this.props.widgetId}; onOrganicRecClick`);
         this.handler.onOrganicClick?.(event.url);
     }
 
     handleWidgetEvent(event: any) {
         if (event.widgetId !== this.props.widgetId) return;
 
+        console.log(`${this.props.widgetId}; onWidgetEvent: ${event.eventName}`);
         this.handler.onWidgetEvent?.(event.eventName, event.additionalData);
     }
 

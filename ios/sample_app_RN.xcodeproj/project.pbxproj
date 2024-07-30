@@ -12,6 +12,7 @@
 		0BA8196C2C562AA9005D36E3 /* SFWidgetWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8196B2C562AA9005D36E3 /* SFWidgetWrapper.swift */; };
 		0BA819742C5634A7005D36E3 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BA819732C5634A7005D36E3 /* AppDelegate.mm */; };
 		0BA819792C568D8D005D36E3 /* OBEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA819782C568D8D005D36E3 /* OBEventModule.m */; };
+		0BC062C22C58F54000E0B4C1 /* OutbrainSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC062BD2C58F52C00E0B4C1 /* OutbrainSDK.framework */; };
 		0C80B921A6F3F58F76C31292 /* libPods-sample_app_RN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-sample_app_RN.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -28,6 +29,27 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = sample_app_RN;
 		};
+		0BC062BC2C58F52C00E0B4C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BC062B72C58F52C00E0B4C1 /* OutbrainSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6E4B3B82A2381A100FE44E3;
+			remoteInfo = OutbrainSDK;
+		};
+		0BC062BE2C58F52C00E0B4C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BC062B72C58F52C00E0B4C1 /* OutbrainSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6E4B3C22A2381A100FE44E3;
+			remoteInfo = OutbrainSDKTests;
+		};
+		0BC062C02C58F53B00E0B4C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BC062B72C58F52C00E0B4C1 /* OutbrainSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E6E4B3B72A2381A100FE44E3;
+			remoteInfo = OutbrainSDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +63,7 @@
 		0BA819732C5634A7005D36E3 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = sample_app_RN/AppDelegate.mm; sourceTree = "<group>"; };
 		0BA819782C568D8D005D36E3 /* OBEventModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OBEventModule.m; sourceTree = "<group>"; };
 		0BA8197A2C568FD8005D36E3 /* OBEventModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OBEventModule.h; sourceTree = "<group>"; };
+		0BC062B72C58F52C00E0B4C1 /* OutbrainSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OutbrainSDK.xcodeproj; path = "../../../iOS-sdk/SwiftSDK-sources/OutbrainSDK.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* sample_app_RN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample_app_RN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = sample_app_RN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = sample_app_RN/Info.plist; sourceTree = "<group>"; };
@@ -70,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC062C22C58F54000E0B4C1 /* OutbrainSDK.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-sample_app_RN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +116,15 @@
 				00E356F11AD99517003FC87E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BC062B82C58F52C00E0B4C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BC062BD2C58F52C00E0B4C1 /* OutbrainSDK.framework */,
+				0BC062BF2C58F52C00E0B4C1 /* OutbrainSDKTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* sample_app_RN */ = {
@@ -134,6 +167,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0BC062B72C58F52C00E0B4C1 /* OutbrainSDK.xcodeproj */,
 				13B07FAE1A68108700A75B9A /* sample_app_RN */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* sample_app_RNTests */,
@@ -205,6 +239,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0BC062C12C58F53B00E0B4C1 /* PBXTargetDependency */,
 			);
 			name = sample_app_RN;
 			productName = sample_app_RN;
@@ -239,6 +274,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0BC062B82C58F52C00E0B4C1 /* Products */;
+					ProjectRef = 0BC062B72C58F52C00E0B4C1 /* OutbrainSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* sample_app_RN */,
@@ -246,6 +287,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0BC062BD2C58F52C00E0B4C1 /* OutbrainSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OutbrainSDK.framework;
+			remoteRef = 0BC062BC2C58F52C00E0B4C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0BC062BF2C58F52C00E0B4C1 /* OutbrainSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OutbrainSDKTests.xctest;
+			remoteRef = 0BC062BE2C58F52C00E0B4C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -426,6 +484,11 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* sample_app_RN */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		0BC062C12C58F53B00E0B4C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OutbrainSDK;
+			targetProxy = 0BC062C02C58F53B00E0B4C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,10 +673,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -685,10 +745,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

@@ -49,6 +49,7 @@ const ArticleScreen = () => {
                     widgetIndex={0}
                     articleUrl="https://mobile-demo.outbrain.com"
                     partnerKey="NANOWDGT01"
+                    extId='ext_mb_1'
                     handler={{}}/>
             </View>
         </ScrollView>

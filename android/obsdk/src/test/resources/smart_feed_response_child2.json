@@ -1,0 +1,126 @@
+{
+  "response": {
+    "exec_time": 33,
+    "timestamp": 1535370238126,
+    "status": {
+      "id": 0,
+      "content": "Request succeeded"
+    },
+    "request": {
+      "lang": "en",
+      "idx": "0",
+      "lastIdx": "9999",
+      "lastCardIdx": "9999",
+      "did": "689346564",
+      "pid": "4737",
+      "lsd": "8832e28d-df26-46ce-8c41-6697f30591bc",
+      "enu": "lxSLYY32do9x3PGaMGCLdeom76Kwh0yrr_ot9ghxBF44hfTZdVlv18MWQD7ml8lG",
+      "api_user_id": "8832E28D-DF26-46CE-8C41-6697F30591BC",
+      "t": "MV84OTFkNmQxM2RkZGNlMDI4MDMxNjlhODkwNzZlNzZhYV8w",
+      "pvId": "891d6d13dddce02803169a89076e76aa",
+      "pad": "0",
+      "org": "2",
+      "abTestVal": "no_abtest",
+      "obRecsAbtestAndVars": "386-1126,467-1501",
+      "widgetJsId": "SDK_SFD_2",
+      "readerPlatform": "desktop",
+      "isHttps": "true",
+      "rtbEnabled": "true",
+      "rtbTest": "false",
+      "rtbBidTestMode": "false",
+      "rtbTestRecsNum": "0",
+      "amplifyEnabled": "true",
+      "gdpr": "0",
+      "sid": 5291479,
+      "wnid": 1145,
+      "req_id": "891d6d13dddce02803169a89076e76aa",
+      "gl": "gitdl9OoE0zDZV3Fi9iNFA",
+      "vid": 0,
+      "ref": 0
+    },
+    "documents": {
+      "total_count": 2,
+      "count": 2,
+      "doc": [
+        {
+          "source_name": "Sky Sports",
+          "same_source": "false",
+          "source_display_name": "Sky Sports",
+          "explain": "reasonType=DEFAULT, , , isClickable=false, reasonCtaText=, reasonText=suggested for you",
+          "pub_id": "2256",
+          "source_id": "5449284",
+          "publish_date": "1969-12-31 19:00",
+          "orig_url": "http://www.skysports.com/football/croatia-vs-england/teams/385230",
+          "desc": "View the starting lineups and subs for the Croatia vs England match on 11 Jul 2018, plus access full match preview and predictions.",
+          "rec-cats": [
+            1912
+          ],
+          "ads_type": 2,
+          "rec_en_did": "IKMyvMqgLgB8Jwaj0mihcQ",
+          "url": "https://traffic.outbrain.com/network/redir?p=j9bA0Ekau4Spv1BmK91c_HwXQsoSZvOD46KZVJSNphnXSrWCWHxU4eeOqxQX4vs2AwFpW_VaoFb8QCtpoEDWP4CdiHi9do5vRH7QFi9An1Je-LcNb6btiUqG9hciTL1Cvi1TqARymMUT49Bz6xjaqUuLmqpyYHlbyZrbyfj3igTzEuvmcpU65npQMBkTeyyEf1b2xeu1EYk7lxZBgg6SH-hhW3QsXiiXNxKeMXuGAvSC14DivxOzNK1xry484xiSMoE0_p5fG_AUFGT1kpt5nyQQJxeBMpHBvdhMd1IWcVJII2_bF4oIOmfpxPMyYXGjT9-uhf8C_mX0Jte3Q_LfX_DTFTMRM-sKBaZCL64PJINPrJmuh04cBceyNuBNB35IeNEUZoBqdK5z636LhQVIw1bP7wO_Sb9VHFN34P0g3ZvZm2suqmdA-vfmcIYu-LkXwqdg0U-Jj3Rl6OCRylRhEXNpZsqhtectY8hNpeZT0xAzmGhRcTKBjU7_EGhPqrHXmGzGCy9sWveTP4bhF9pPvaiS9aDdmurd2O-IMqzDBkgTGv6qLEYB9ZmkzeFkcs0XDNHz4vQhpxhzfivfBKcwpYn0j34TpMh4jt2xoPFzFLTiFjS2s17NT31X6mH6cjojPXCt43e89MhdBor-Oz7gdDgtYIkUOqzrZ4QAs_8NUq6UBk7V7VQSocaP6ux6hjDnOcbEr7MxOYtHx9uy_melZYK1vtKFYIcCy6N9gtrydE9a92v25ayBSP0ebcptr19HyEDVLGoakyzYU-PwcAK3Z57ZNodTHAf8_OKfo8bQSBouCZCmc_Js3pBCexAWuWCV&c=3ab3b8c5&v=3",
+          "content": "World Cup (Sky Sports)",
+          "pos": "0",
+          "ttid": 4,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6Ijc1YWM5MWE3YjliYTk4ZjA0MTg5NWVmMGQyNjBlN2JlNDRjOWZhNTcxYjUzYWRjZjhkNjNhOTg4NzJjMWM3NzEiLCJ3IjozMDAsImgiOjIyMCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.webp",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "GLOBAL_DEFAULT"
+          },
+          "logo": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImY5OTE5OTIxMTg5YTNlOThlMDFiMjE3NjQxOTg0ZDcwOGY5ZWU1ZmY5YWFhM2I4YmRhZmZmNjQ3MmIzZDljOTQiLCJ3Ijo4NSwiaCI6MjAsImQiOjIuMCwiY3MiOjAsImYiOjB9.jpg",
+            "width": "85",
+            "height": "20"
+          },
+          "reason": {
+            "text": "suggested for you",
+            "type": "0",
+            "clickable": "false"
+          }
+        },
+        {
+          "source_name": "Sky Sports",
+          "same_source": "false",
+          "explain": "reasonType=DEFAULT, , , isClickable=false, reasonCtaText=, reasonText=suggested for you",
+          "pub_id": "2256",
+          "source_id": "228130",
+          "publish_date": "1970-01-01 00:00",
+          "orig_url": "http://www.skysports.com/nfl/news/12119/b54a651206b58434be91122c54059ff6/preview_story",
+          "desc": "We pick out seven first-year players to keep your eyes on during the 2018 NFL season.",
+          "ads_type": 2,
+          "rec_en_did": "NnYNpHp03iHxH8CgpCaPRg",
+          "url": "https://traffic.outbrain.com/network/redir?p=jmGa7YGIlp3q9r_n_DcLB_ihR-hIUX3sUWpTUepsphE-xKpWGdKZzpC4VITsHIsvWusVjEtR8T5pJvFKL0OlpB9J8AElFjfAmNpj-vSh3-lLzaTDJe4Y8nwSgFnvUq4U7YsnjRrwYCttYqMXZWNf_nEEqDy38EBGUGiQWTLHqOA5T6EGhwF7XncBpaidu5uk-BtEz2XueH5oNVB_Ea7A9TCWx2jrZRpIrnVo6SMT4QqYxl5leNoqkQe5dmwpITpiaUJ-nQy9nJzp7UdcB11QxAikzi-qOmecrh5q6qiI6SyWbjdtSMUjCkpU14cGVZYrRSNbvXJc0hutq3nW9xVQjOmWJCX2aax1NswgeB-hh4xG79ClV4y29D6gaB_2BX-KDkZ8y-BrUEbjXALC3J8T-xfRSmdSKQWfDAM9wssx7hegyq0HkIsobeE7qcpXO4vTGcRLg-7CMZp36CD7s2wieqELuzU5IFsmnbIPwgYb69rTGwneC5m-xxQs7IS4e8C7mk7t4WiIzB7yD13fczAN751ZT6HkLwIIUGTCdEaVEniLvQhQdmv02AWjDh5sQi9reyqnIdosAdi7HdEJGPuiBoyhsTM_L_30Ge9UceQK2R78tG4meqwsFAsDvZCNFwWrSvGLcIUIy5q7LB8sRt1fPe4_nNwjfz90zZ-sYOsPDMTXPPubZ33hUXEzrkTBo3VcEsiyKMFTZD81SXIovuDL2z9py4R_r6GJKEXuXO4L0SkOHjBFB_7nbMJBc3QuS_uREDCioqNZnxuZr45C7PNwE_muycsAZwtsbMj-xfFX-80&c=84179c14&v=3",
+          "author": "By James Simpson",
+          "content": "NFL rookies to watch in the 2018 season",
+          "pos": "1",
+          "ttid": 4,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImFmYzNhYzg4ZDliOTFiMDhkNzgyNWJmZDNkMWY2OTAwYjM4YzZmOWU2OWU3Zjc5YTA3YWVkNTE2NDY4MDhhNzMiLCJ3IjozMDAsImgiOjIyMCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.webp",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "DOCUMENT_IMAGE"
+          },
+          "logo": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImY5OTE5OTIxMTg5YTNlOThlMDFiMjE3NjQxOTg0ZDcwOGY5ZWU1ZmY5YWFhM2I4YmRhZmZmNjQ3MmIzZDljOTQiLCJ3Ijo4NSwiaCI6MjAsImQiOjIuMCwiY3MiOjAsImYiOjB9.jpg",
+            "width": "85",
+            "height": "20"
+          },
+          "reason": {
+            "text": "suggested for you",
+            "type": "0",
+            "clickable": "false"
+          }
+        }
+      ]
+    },
+    "settings": {
+      "flagPublisherZappingFeature": true,
+      "recMode": "sdk_sfd_thumbnails",
+      "globalWidgetStatistics": true,
+      "apv": false,
+      "InstallationType": "mobile-app-sdk",
+      "dynamicPaidSourceFormat": "Paid provider",
+      "dynamicOrganicSourceFormat": "Custom Organic Source"
+    }
+  }
+}

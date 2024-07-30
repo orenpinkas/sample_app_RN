@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SFWebViewWidget">
+
+        <attr format="string" localization="suggested" name="ob_widget_id"/>
+        <attr format="string" localization="suggested" name="ob_widget_index"/>
+        <attr format="string" localization="suggested" name="ob_installation_key"/>
+
+    </declare-styleable>
+</resources>

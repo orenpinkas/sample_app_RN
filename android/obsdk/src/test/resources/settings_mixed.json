@@ -1,0 +1,15 @@
+{
+  "settings": {
+    "flagPublisherZappingFeature": true,
+    "defaultRecNumber": 6,
+    "cwvReportingEnable": false,
+    "recMode": "odb_strip",
+    "globalWidgetStatistics": false,
+    "ViewabilityThreshold": 2000,
+    "apv": false,
+    "cwvReportingThreshold": 75,
+    "InstallationType": "other",
+    "dynamic:IsShowButton": true,
+    "dynamic:HeaderFontSize": 18
+  }
+}

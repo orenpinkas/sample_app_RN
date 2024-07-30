@@ -9,9 +9,10 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.outbrain.OBSDK.Outbrain;
-import com.outbrain.OBSDK.SFWebView.SFWebViewClickListenerFlutter;
+import com.outbrain.OBSDK.SFWebView.SFWebViewWidget;
+import com.outbrain.OBSDK.SFWebView.SFWebViewWidgetListener;
 import com.outbrain.OBSDK.SFWebView.SFWebViewEventsListener;
-import com.outbrain.OBSDK.SFWebView.SFWebViewWidgetFlutter;
+import com.outbrain.OBSDK.SFWebView.SFWebViewWidgetPolling;
 
 
 @SuppressLint("ViewConstructor")
@@ -22,7 +23,7 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
      *  2. implement event handling and propagating the events up to RN
     **/
 
-    SFWebViewWidgetFlutter widget;
+    SFWebViewWidgetPolling widget;
     ReactContext context;
 
     public SFWebViewWidgetWrapper(ReactContext context) {
@@ -42,9 +43,11 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
         String extId = args.getString("extId");
         String extSecondaryId = args.getString("extSecondaryId");
         String pubImpId = args.getString("pubImpId");
+        String RN_packageVersion = args.getString("packageVersion");
         boolean darkmode = false;
         Outbrain.register(context, installationKey);
-        SFWebViewClickListenerFlutter clickListener = new SFWebViewClickListenerFlutter() {
+        SFWebViewWidgetPolling.enableReactNativeMode(RN_packageVersion);
+        SFWebViewWidgetListener clickListener = new SFWebViewWidgetListener() {
             @Override
             public void didChangeHeight(int newHeight) {
                 WritableMap params = Arguments.createMap();
@@ -76,7 +79,7 @@ public class SFWebViewWidgetWrapper extends ViewGroup {
             params.putMap("additionalData", Utils.convertJsonObjectToWritableMap(additionalData));
             emitEvent("onWidgetEvent", params);
         };
-        widget = new SFWebViewWidgetFlutter(context, URL, widgetId, widgetIndex, installationKey, clickListener, eventListener, darkmode, extId, extSecondaryId, pubImpId);
+        widget = new SFWebViewWidgetPolling(context, URL, widgetId, widgetIndex, installationKey, clickListener, eventListener, darkmode, extId, extSecondaryId, pubImpId);
         widget.setLayoutParams(new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT

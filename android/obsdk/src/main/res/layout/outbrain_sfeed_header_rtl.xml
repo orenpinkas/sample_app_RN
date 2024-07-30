@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/header_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp">
+
+        <ImageButton
+            android:id="@+id/outbrain_logo_button"
+            android:layout_width="82dp"
+            android:layout_height="15dp"
+            android:src="@drawable/outbrain_smartfeed_logo"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="4dp" />
+
+        <View
+            android:id="@+id/header_logo_separator"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="#d9d9d9"
+            android:layout_marginRight="6dp"
+            />
+
+        <ImageView
+            android:id="@+id/adchoices_header_logo"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:src="@drawable/adchoices"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp" />
+        <TextView
+            android:id="@+id/outbrain_sponsored_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="כתבות נוספות"
+            android:textColor="#282828"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/header_linear_layout"
+        android:layout_marginTop="6dp"
+        android:background="#d9d9d9"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+</RelativeLayout>

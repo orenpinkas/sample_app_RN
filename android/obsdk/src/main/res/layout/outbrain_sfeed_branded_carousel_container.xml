@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.outbrain.OBSDK.Viewability.OBCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/tools"
+    android:id="@+id/ob_sf_new_horizontal_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/new_horizontal_header_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="14dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                app:cardCornerRadius="22dp">
+
+                <ImageView
+                    android:id="@+id/new_horizontal_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="sponsored by"
+                        android:textColor="#707070"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/new_horizontal_item_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Pottery Barn"
+                        android:textColor="#707070"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/new_horizontal_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="14sp"
+                    android:textColor="#4c4d4c"
+                    android:lineSpacingExtra="5sp"
+                    android:text="This is the recommendations text, title is really really long"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/sfeed_new_horizontal_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_horizontal_header_ll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="30dp"
+            android:layout_below="@id/sfeed_new_horizontal_scroll_view"
+            android:layout_marginBottom="8dp"
+            app:piv_animationType="scale"
+            app:piv_selectedColor="#000000"
+            app:piv_unselectedColor="#9b9b9b"
+            android:paddingTop="8dp"
+            attrs:piv_padding="12dp"
+            attrs:piv_radius="8dp" />
+
+    </RelativeLayout>
+
+</com.outbrain.OBSDK.Viewability.OBCardView>

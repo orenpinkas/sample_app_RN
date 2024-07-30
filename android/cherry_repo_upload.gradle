@@ -1,0 +1,43 @@
+apply plugin: 'maven-publish'
+
+group = libraryGroup
+version = libraryVersion
+
+Properties properties = new Properties()
+File localPropertiesFile = project.rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+   properties.load(new FileInputStream(localPropertiesFile))
+} else {
+   println "local.properties file not found. Skipping property loading."
+}
+
+artifacts {
+   archives sourcesJar
+}
+
+
+task printValues {
+   doLast {
+      def user = System.env['CHERRY_REPO_USER'] != null ? System.env['CHERRY_REPO_USER'] : properties.getProperty("cherryRepoUsername")
+      def pass_key = System.env['CHERRY_REPO_PASS'] != null ? System.env['CHERRY_REPO_PASS'] : properties.getProperty("cherryRepoPassword")
+
+      println "User: $user"
+      println "Pass Key: $pass_key"
+   }
+}
+
+afterEvaluate {
+   publishing {
+      repositories {
+         maven {
+            def user = System.env['CHERRY_REPO_USER'] != null ? "$System.env.CHERRY_REPO_USER" : properties.getProperty("cherryRepoUsername")
+            def pass_key = System.env['CHERRY_REPO_PASS'] != null ? "$System.env.CHERRY_REPO_PASS" : properties.getProperty("cherryRepoPassword")
+            url "https://cherry-repo.com/repository/releases/"
+            credentials {
+               username user
+               password pass_key
+            }
+         }
+      }
+   }
+}

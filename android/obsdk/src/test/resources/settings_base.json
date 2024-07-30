@@ -1,0 +1,14 @@
+{
+  "settings": {
+    "flagPublisherZappingFeature": true,
+    "defaultRecNumber": 6,
+    "cwvReportingEnable": true,
+    "recMode": "odb_strip",
+    "globalWidgetStatistics": true,
+    "apv": true,
+    "cwvReportingThreshold": 70,
+    "InstallationType": "other",
+    "dynamic:PaidSourceFormat": "Provided to you by $SOURCE",
+    "dynamic:OrganicSourceFormat": "Recommended by $SOURCE"
+  }
+}

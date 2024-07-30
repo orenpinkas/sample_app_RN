@@ -1,0 +1,247 @@
+{
+  "response": {
+    "exec_time": 90,
+    "timestamp": 1543852182754,
+    "status": {
+      "id": 0,
+      "content": "Request succeeded"
+    },
+    "request": {
+      "lang": "en",
+      "idx": "0",
+      "lastIdx": "9999",
+      "lastCardIdx": "9999",
+      "did": "689346564",
+      "pid": "4737",
+      "lsd": "8832e28d-df26-46ce-8c41-6697f30591bc",
+      "enu": "lxSLYY32do9x3PGaMGCLdeom76Kwh0yrr_ot9ghxBF44hfTZdVlv18MWQD7ml8lG",
+      "api_user_id": "8832E28D-DF26-46CE-8C41-6697F30591BC",
+      "t": "MV80MDhkYmExNzQ5NTVmYzVhMjk3ZDU0MGRmODUyZTZhNV8w",
+      "pvId": "408dba174955fc5a297d540df852e6a5",
+      "pad": "6",
+      "org": "0",
+      "abTestVal": "no_abtest",
+      "obRecsAbtestAndVars": "386-1124,403-1199,536-1695,378-1101,539-1701",
+      "widgetJsId": "SFD_MAIN_2",
+      "readerPlatform": "desktop",
+      "isHttps": "true",
+      "rtbEnabled": "true",
+      "rtbTest": "false",
+      "rtbBidTestMode": "false",
+      "rtbTestRecsNum": "0",
+      "amplifyEnabled": "true",
+      "gdpr": "0",
+      "forceFeed": "false",
+      "sid": 5291479,
+      "wnid": 1117,
+      "req_id": "408dba174955fc5a297d540df852e6a5",
+      "gl": "gitdl9OoE0zDZV3Fi9iNFA",
+      "vid": 1,
+      "ref": 0
+    },
+    "documents": {
+      "total_count": 6,
+      "count": 6,
+      "doc": [
+        {
+          "source_name": "Homepage",
+          "same_source": "false",
+          "source_display_name": "Homepage",
+          "pc_id": 104114064,
+          "adv_name": "HIVE_IL_Buzznet_SA_PartnersProgram",
+          "publish_date": "2018-11-02 16:29",
+          "orig_url": "https://www.buzznet.com/2018/11/flight-attendants-reveal-secrets-of-flying-and-what-its-really-like-working-for-an-airline/?utm_campaign=flg-d-us-r-0-0-181109-bn-ob-b9-a2&utm_term=aa_flg.JPG&utm_source=ob&utm_medium=$section_id$-ob&utm_content=000f04adaea1989e5636122b035013a0cc",
+          "rec-cats": [
+            2100,
+            2101
+          ],
+          "ads_type": 1,
+          "rec_en_did": "G2ItGGyYWNFvpsjQRcyZRA",
+          "url": "https://paid.outbrain.com/network/redir?p=668lEyziqK7IXYYAREtkSiH0InoOyN98ec9S7yStr2CAjPHmIxPeqBNPyACH9uKN8i1DqL5_bcu2w7A0wwvzfpj3kEVctWXmtmeZGLg2S6QOrragktJvH4gGrkIImpI8P19ZIp8nojBoEBbDMYipYc7B0IvgzkPy7nJD_2i3me7Te_JjejzelaozGYMOxa2q0YUvBPNa77T7iI2EKQp8vXxiCTjMcFnYT1WO1g2egQwU67e1rnQA5riyKPJ4OVpZ56XshAMMAVzTe4qmNtHH9XAIhGspKv1dnZDHSb3VBTHQVVtFkYEg-fcurVhEO4hxxVkXGflr_iNWPU6PScg1NIjn_Qov2zvPEfE7sGL793tvkrQVpT6BYyDiJCOSMnWaFtRMuAWI6aoMlpIriuEbhXEeYqRDIA9fs3l1KOCX9SUYoISTmxmP7bhFdzrKt2eiK7iHcdQhpjQokKyyM_ZSKy_C4zMfnjY1SQ-_whMssNvtLWTumne9qs-KwDI5FbbQWvBCc7K5tjohgAwkXGpUJY-7XdAQ1e1Lo9Za1APGb75n0EDDCI9YEHu0Or3ehUr_HSCk5kvV1FUwRticuqvzBoJWbKh4xIg5d4BuK8hKMsIw2taswvPf1hKDBkp2-CLgJHdgV9PwNjWSXmQu5AeYbgbNfeM0ehKcE5kMImzVP10tsr1ShF5reSGsDfq_lJW4gBsNqU5QKEqAWmFQ3XBo_dP3t_Ik37yrau1XcmX_Ojcet8C05fHY4BLWgs1vQw6spRfikz4iIMAW4uAUbiHClKFBaMvoc6Fh8lWwhFjooYIvTDzrIZO1JoA44SshSFpaMn0KxJhoNH5LAj7nULApPgk2wSsf7PLPjDZV4Z3HljwtF7QjVQoRoB7Qtg2swBJhAHPHuhtoSxHh72lGMUijACKCFfiFD8V4txdPKhY1FpGXhrI6g5HMX83p9ZWDAv4bCCoM_ffXv2qPE4usefVd_xHHyvBpT3PWTzKQ8aW8bbWGQGSopU8xzDEkkviOwZj_&c=3037519&v=3",
+          "author": "",
+          "content": "[Gallery] Things Flight Attendants Notice About Passengers In 5 Seconds",
+          "pc_cmp_id": 1001178362,
+          "pos": "0",
+          "ttid": 3,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImJlNjg4OGE5MjhjNzY1MzYwZTMxYTI5MzNhZjg3OTRhMzIyYzhiODZlN2M2YjMxN2M4YWE0Njc0MGE1OGI1OTkiLCJ3IjozMDAsImgiOjIyMCwiZCI6Mi4wLCJjcyI6MCwiZiI6MH0.jpg",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "DOCUMENT_IMAGE"
+          },
+          "publisherAds": {
+            "label": "sponsored",
+            "isPublisherAds": "true"
+          }
+        },
+        {
+          "source_name": "Discoverytheword",
+          "same_source": "false",
+          "source_display_name": "Discoverytheword",
+          "pc_id": 104018902,
+          "adv_name": "DiscoveryTheWord_SA_PartnersProgram_Desktop",
+          "publish_date": "2018-02-12 10:37",
+          "orig_url": "http://discoverytheword.com/cool-facts-you-didnt-know-about-the-vikings/?utm_campaign=2649_pp-dtw-out-d-us-cool-facts-you-didnt-know-abou_1&utm_source=outbrain&utm_medium=$origsrcid$&utm_content=00aea48b100e42c01eb1f4b349522174a1&utm_term=0020d4534a704cb43aa703061ca25cfa2a",
+          "rec-cats": [
+            2004
+          ],
+          "ads_type": 1,
+          "rec_en_did": "fvwmKLbwGF7Lq_xroze2oQ",
+          "url": "https://paid.outbrain.com/network/redir?p=yPP1oGwxT5-Sf83tq7JJj06m6jtZpB3fzNp_EcOp-9Uk4znSlisJxNvAAL_u9FsgRfONQXJLzNWj_JPMCziP1pHHXdz8krjMK2u9fGqoOADkll15cXug6WDPzoT7DVGsQU7PVr4N1U-da8EvbvyRH-QbPPKcTkCqLk3AKBytwCWCboEeL23AjwypYt8rsLFayQmVuBRv0q8gtXuR4k8kB_YUeR655A02XCYg0Fo_7Tq8FexQxzOS-ToTIZVu20X-ede43Ut4CikyoSH2e_81PwWl1MEvwBYpEB5mZEcqImME-6LgNccdxb1T-3uolcf3NSDaqPCO34pQXkjqrcCnedjhRW8YAh7lVI0LHGOp5jIJJuTOdqSfhGIpi4NLizlANdSdQD9oAptKDFgz6X1TqxXBHNtNKZ5SfZLsBSjhyOWJkkX_rCa-uNRxOK20HV8zNo324ZmUPDMmf0dZdcop7iz_ZHc5IWXKNmVOpzCpP0n6GtRmLP9S9dUPbmmQ6a_P5RQTqXV4JglX-TdSy_SbsQ88J7VgUA25nN2o7Ob1ke_ugyfFvZtOd2mUDDl5Y0LiL-6wrSfNWN6TPED8MEgTlM9X_Pp6KzuH3DuGG2rPjQhyF-CUAD7PJXiIEpvKzuJRycKhPUlwuI59nhpYlE8oekyIC-WH5CT_IysI2ZfWvcwDP3nOkymwi79rAyOI-YyEam52rZGvXntlQKXxP5qzPRL7sLQVxI2ghxAZ_3irohYj5IxiNzK3hLeNM4BbrjRXBCUYRhXgoDIDWSVEwIxWMQr3vl5GRqcGSVFoHfK-ozS6dphB9Xgoc7DGbEBSVT9qdpO5yinsF9bUJyH3zPn682BbZlneopaYGrDpurCQREq6bqNZ-eYW6aWRZtkyA8oV7MBGjlCrQiH9BcQ5P9-rCZCMdeB_gFaUWquHdsOsfVinoApi0jgbp_-yqlDx5a3UUgldRX4Zmy3x3pOJ0yspDOtXiX76cUCbCHFvL2Rbif-VrOOxqSEKReXqoBJYTQh9&c=769a19dc&v=3",
+          "author": "",
+          "content": "[Pics] The Untold Story Of Vikings And What They Were Really Like",
+          "pc_cmp_id": 1000753782,
+          "pos": "1",
+          "ttid": 3,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImYzMTBhMzBiNDZhMmM1ZDQ0MmZhNmMzMDlmMWU5ZmIxZjUyMDA5MjUxMzA5MDM2YzNiNWQyYjc3MGU1M2Q3OTAiLCJ3IjozMDAsImgiOjIyMCwiZCI6Mi4wLCJjcyI6MCwiZiI6MH0.jpg",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "DOCUMENT_IMAGE"
+          }
+        },
+        {
+          "source_name": "HistoryInOrbit.com",
+          "same_source": "false",
+          "source_display_name": "HistoryInOrbit.com",
+          "pc_id": 105274496,
+          "adv_name": "Socialholic_SA_PartnersProgram_DT",
+          "publish_date": "1969-12-31 19:00",
+          "orig_url": "http://www.historyinorbit.com/why-russia-did-not-put-a-man-on-the-moon-the-secret-soviet-moon-rocket/?utm_source=outbrain&utm_medium=JOSH_HIO-Desk-US-RM-1127-01&utm_term=$section_name$",
+          "rec-cats": [
+            2004
+          ],
+          "ads_type": 1,
+          "rec_en_did": "vWx0zj-Y9B95a2KRSXKglA",
+          "url": "https://paid.outbrain.com/network/redir?p=-s0vQTTtZpyOnOt6RuHoAUe8odA18fTVmHO7ZNS8oBvt3kEetaI6C_Qzi2BH4vTxFnfQ_YtMwlKr5Fsvh0y1Xu29hgTHy_Z9mm3T33_MSgEMk70lk6uZqQYnw6YKqLEiOwBBPhDSJ2xc_rL6lCQoifUihY45XmzspV8bR9Q7BtQu6nyxrcdKpmF0QDUqkJckz8c8Jr1d_-sC4FcXRR4UoKZB8isfLsx_1zm7zVitgMxM95COoJrx7QhZVJP2AIaLJeBW4Rhbf02ImCH-VHTrGMSNZPFznsD4TPPsMTmiVAvNxrbH72CwhB86lgBXmgTpXvdm3zgcl-8xGtZwK0SBjWp40CWyu1hanyPuosadgf1Z4wn9h8w69JjYhh7pOVAV7RzaXPZ27YG0CPdZpuZB1POOIQKzHBXXkXsbNJ1vFGRsIC7AIAFgBEBcN6zIZHKTJFLQf2vWZE-VIotMtlRcfUZUEZM5RsRtaqZjcNYpxk4LTQxMYOzb5yol2D2C6cTv5qaWsZqZPFwb3oe4KhfNNdMikk6sGwO9-l-7ZpIXAJTcKVyntzVQQvWTDfRtJoMmJ4SFxw8IMiIpsFQTbfXxkPHsGRVkFcBqsH-XOLXDiK-j6cAnGvH90DJaqGu8QJA0IM-1HQXwLS3TLxZ9jQ4A1klc-8_87SY0aNEzPYK7U_80ePbQkpQxtBed0ctc3t5iHBGvuE6nrj6QiC54U0V7IGkfHQwxORLJSeIIfpnsOr0s08jpEyq72JBn_CoGK3_6wdMX6cS5LdS3QxQloxErplTeRizvJ_gHHcDW9d7r-JVn5ATKJiFqsj5F8c1Drxjb73wP2qOM2c0r-A3NdYkc6s5JVuQeDgvV6Px2XcykQv3E-Njg14nghd5lCpFHp0JG-BeSpY6ZHebg8lVAsAl-WgBPvrpY5rZBDAs2IAgZKVNv3DViO5NWPAp6X6Xn9MRgQ5xCuUiM0_hhMyzeVYa_ztF-59tibFqzaAXtW6ZAhAkaLSqslep_lLGkfPSdT53-&c=8011d538&v=3",
+          "author": "",
+          "content": "[Pics] Why Russia Did Not Put a Man on the Moon \u2013 The Secret Soviet Moon Rocket",
+          "pc_cmp_id": 1001234776,
+          "pos": "2",
+          "ttid": 3,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6IjI1YTBkMTdjNWJlMzIwNmVjZWQ1OTdlYzFmYzU4MWY4NjljNTIwMWQ3YjBjNWZhZjJjMWRmYWRkOWY0NDEzMjkiLCJ3IjozMDAsImgiOjIyMCwiZCI6Mi4wLCJjcyI6MCwiZiI6MH0.jpg",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "DOCUMENT_IMAGE"
+          }
+        },
+        {
+          "source_name": "HowStuffWorks",
+          "same_source": "false",
+          "source_display_name": "HowStuffWorks",
+          "pc_id": 101334758,
+          "adv_name": "How Stuff Works (System1)",
+          "publish_date": "2018-08-27 11:20",
+          "orig_url": "https://play.howstuffworks.com/quiz/what-rank-would-you-have-achieved-wwii?acct=00f6a7d2cf2656566c6578c8d8ce8c3a03&utm_medium=paid&utm_source=outbrain&utm_term=$section_id$&pbid=$publisher_id$&pbn=$publisher_name$&scn=$section_name$&adid=001c955f58db9bbdc7589ef3e6cbffa5d1&mkcpgn=eef4ae7211a44af1842f044809351a20&sg_uid=eef4ae7211a44af1842f044809351a20",
+          "rec-cats": [
+            1904
+          ],
+          "ads_type": 1,
+          "rec_en_did": "XGZ5NRRsTr-qDcAeR5l6yg",
+          "url": "https://paid.outbrain.com/network/redir?p=ZscRPIyNSJTwOyLzgIdhQ1dyc59_KAPu5UIJLh0gJSNM5Y_1ohhhwr2OnanoLXlhYEa0m61nS0qoW9qny1rglJL7R669A8jDuIrrtCVdQGOylN2hbQFJZuCYPpYCPe_SxXtlRsLfEyU85h1voSJUFF3PgpqrnDnw49Cn5iIxQBK3tRVjXH3s2VzRcOXcPvZlCsWcJ6byISbP7YdMFIoK6w-qxeO7XQgkqwrziZ4epp26-2ZdL_nZcsuiARJ0kxqxHtme_SHPfbDwFlpCBRFg3woEO-7ibVjuR0tUTh-aJ6PGMeFBmEiTUWCC36MKhMMLfJp05I7RkBSh7Tn6KyumiM0brlMfr_Nk74DoQ4uYWf2ThPmTVu3uHWh5R9vnR3Hs6EDso7l6M9zw1UibL0VOMQXYVg-iyi13ZH5uZCl0oXjKrnJetx6tAf9cCg1CRnVMBMa-75rv2Fi3QsHLGhXo_dZwEw1mcCZeOQsgs-Nvf5SY83CFw4Q5grdt4BhcnnL6DhZBZQhWm4W9Wd09cuRiy92ht3lC5htxgByP_XctpvptvjJgI26pvFJRT45zxDmPtWR1G6yzJO3toyqWcq_8zo1qtiG-VJgA43PtYoN2wbM7N7kUjksLi_viqYxuQldy4QZ4TPH0TSEgNKif95RumjWwoNs0TAz1NtQEPIXBbelTkzPiU_3UlymuGUtJNEA9nr4DVgCtF3uBVkDV30lR4sn8O8cc61LpWncLJgOuX1QjqWEUZZri4ob2O6HVyTWBFk-9t70WlYxhkGfp--kdxXB8K4eDnxPATK63SuYkIxi6q_MQeJpnedYOuybnZ2LArGJqVYunGSibHdT2SWlFxaOuf1Rr7fKbWqJlkF-7Ugx-lxkkKrhiyxzv_dUQMB8Wvz9Qi2lvXjJzgL95_xg3oI5ePOqncTGuAbNLA5GyoTDJucWBFUOhW6TEntCwAAt7CKMiKc8ukMrktmVRr1c0__YppTAmF3vgCmefp-Z7gKovyGfSUlp9S6d0OmmMI9XQ&c=40fab02a&v=3",
+          "author": "",
+          "content": "Quiz: Discover How High You'd Have Ranked in WWII",
+          "pc_cmp_id": 1001066211,
+          "pos": "3",
+          "ttid": 3,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6IjU2ZjRiNDE1MmMzNDYzYzg2MDA1M2I2ZWIyMDFmNGEyMmVlNDJmOTdiNmMyOGZhYjAxNzFiOTlkNWY4YzZhZTciLCJ3IjozMDAsImgiOjIyMCwiZCI6Mi4wLCJjcyI6MCwiZiI6MH0.jpg",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "DOCUMENT_IMAGE"
+          }
+        },
+        {
+          "source_name": "Parents Tribune",
+          "same_source": "false",
+          "source_display_name": "Parents Tribune",
+          "pc_id": 95861483,
+          "adv_name": "Uprocket_FrontPageWeekly_SA_PartnersProgram",
+          "publish_date": "2018-05-03 17:59",
+          "orig_url": "http://www.parentstribune.com/makeup-beauty-tips-oda/?utm_source=outbrain&utm_medium=referral&utm_term=$publisher_name$&utm_content=$section_name$&utm_campaign=beauty-desktop-t1",
+          "rec-cats": [
+            1505
+          ],
+          "ads_type": 1,
+          "rec_en_did": "9LcqMxcMUcn9QTreeIk89g",
+          "url": "https://paid.outbrain.com/network/redir?p=tNfbxja9-4Mtag4oUqwgnKcbUiCjEjo_KOglAlXcFIpra3UWpIXP8WDQkl4X93NlIzEKstheDyO_LqyWy_pX9nx-O90DzEu8gmWp-RhrSAHUIKl_le8uyADXIlKQccoMVoDWJlvkhUZ4cVemk8kqN5zJbgpXwgSMUypSw6vjx9RQNBV1z4MTigGfcXqWSPKp7H5ilb2us8iWLp7NOc1uQ245awxIYIkVQW__ZGqMuWL5PgrrL88T4HIFAZug9PClghnXqUH5ODfl3U8qLxzxCLBH1yAsMoDH-vWNX8lR825Dd_snE0uZIqzdw_sUBJa2iVFAZVnpMPoHGNIm1mzBMMNfKNI2kwdiCk6nUK_-3Tyg-BaPFSVJMoGC28pNVw1u4hVwrDEa4Z3amwIuDyopS3zDoHl-a45REX6rZ8Fcli_92aAId1lwfugJASjdDfT9Tj_WrxYJIadfOl8k84OJJ3DkkJUKF4_Ul_A6FArNIPnSfVzRUb15zlIKnxeyNiyYFcdP6SCZquCv1CdWuX8FHCZkFvIr1OnA-xsB1y4-dVwt-WIRk4NBaShg1eV5YDpmTb6_PimB5_9jxmyO8654fARz5gX5gBGCiL4s4_wD-KMMgdoZMh0HwYjPc-iXsS2dEoFcKoyILOXlQMT9rJgCK11Nc8_LAenR6nYlHKL3eRX6DVzpOKkbcd_AlvZkDMmwymGM_NkLVSObw0g5PsL-dIrpHR3xCji29CCv-O_JM-cO4SUPhNZCAGGcwPrEI7UbMnbmTwYNqP2s8bKff1hfWzDBmYGrAvV2vXBnQ35NT4BR2ejA6jwlq4nKy2GBK7Vzt5ZKNRDGYSmCF_rVVGveHkLwXuKCEf0y_4Kv-FsvzTXHBN7YSWVUS7zLJ--6WR7t2M2IChx9IZAN9TjGmRU9yuma4oL7EjbDXhjtu70dKAaiNE7WqsCctbI2IpTbtGsMrTQmMoSBk56tgbSvYaV-8ry_QyMF8y1v0rKEfVyrcXgXktUjuC21f-b2QRuFEc7o&c=8a255539&v=3",
+          "author": "",
+          "content": "10 Makeup Tips All Older Women Should Know [Photos]",
+          "pc_cmp_id": 1000677413,
+          "pos": "4",
+          "ttid": 3,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImFiYjM0YTk4MDMxMWZlNTk3NTQ0ZWNjNmQ3YjI3YWNlMjk2YjMyYzI2MzBjMWViOThlMTUyM2NkNDlkNjYzYTMiLCJ3IjozMDAsImgiOjIyMCwiZCI6Mi4wLCJjcyI6MCwiZiI6MH0.jpg",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "DOCUMENT_IMAGE"
+          }
+        },
+        {
+          "source_name": "monday.com",
+          "same_source": "false",
+          "source_display_name": "monday.com",
+          "pc_id": 102518219,
+          "adv_name": "Monday.com",
+          "publish_date": "1969-12-31 19:00",
+          "orig_url": "https://monday.com/lp/outbrain/time-management-vid/?utm_banner=Gantt_YellowSystem_Still_timev&utm_source=outbrain&utm_campaign=GroupUS-Desktop-BomboraSMB-Gantt&utm_bdg=exp",
+          "rec-cats": [
+            1207,
+            1211,
+            1406
+          ],
+          "ads_type": 1,
+          "rec_en_did": "X9SXVyAap8Svci4aqmAFrw",
+          "url": "https://paid.outbrain.com/network/redir?p=adyGaXoc5pdlVWGy5XgiYqgjsipUTy3L-bXmuzVZqrSvJ6yrE-874ll-a_hd7qdSV56_4v9L6PsxomnLNJTuf_XgM1LPWoB1HaY9gvtTWBu0uf7YpR1aTDNjvE5ybX9iC-WWOzNarfDJVymBVgEdlik6HVvSsiYVfxvlgRLz_AhslqOQJ8V4fHZjk6fRUA5jp3XbcRSsg9myG9o5BFoEKVMrAHlIDNDMEqanMeb8sKx48YwWRkyHQrKyUpXECCXLHIWrUc0OtjSkZCwbVMBqFioXt2BIYJ_nfyL7FaVHR2AzggHnvk9Z8uh4oQdzz0DczoEd_MlWWgoqBQyUIbmy9tvKZNaX3OBsKayTH_0QNTAw2lBxZHEvBjmpwdKP4t49hpgPCXwAAr_jpxkbUcm15dnjy57_gJF-X8iGcm4VwbjuByz5fL5ZG3EvQc06whjnPylHYBpEzvvC47tG1GzbplQR2S18r4yxxAvPSUoemHhh9SXgaHrgb30JqjwTEytQaUoaqwwOEjDrcl7vC-XV4fBw3gdqd8ZHZpEpoT0fa9pF8ztpepuK5AhlzICboib5z07yMA-8LOjuLP9olIafICne49KRgsvRAz2eVK_PMZXAV3EiH9w_6XVGxu38mAghSpfLdRHe8b_GBXk_SkjE-vsOFAw26-U3lXc-93jyKOQvPGDrv7HWN9zGaxbcEJIWofo9xmR94eMtfRPfwSHq2kuW14miVpg2NBCQeP7K24VYLgMcKoulOzgQNYnX-WPzTcWYh1HIT1Q0ibkXfgF8B6cfUfLI1pizaAWp5s6gnFjRJLI1ufIxoDKgdV8Y9UcOsESQavlLh9h9f0Wf-IsCGrUOl-qvRWTmDSAr4WUZ3lavHtaIXvaZ2wzI5gfQ6PuN4rYY80X5qwIVLorch-gG0bJLC1egCIT6ZR2uK3aIC1PPtxornPKlpQOeiO-mYGq7x0zzA8_aJI20-mi5w7-BM2o2ndPpdnVkJWEilcMZcuj-OMJvUBoT89m21mtBfwyT&c=a16e984c&v=3",
+          "author": "",
+          "content": "Still working with Gantt charts? There's a better way",
+          "pc_cmp_id": 1001114063,
+          "pixels": [
+            "https://ad.doubleclick.net/ddm/trackimp/N728909.1984505OUTBRAIN/B21337824.224523334;dc_trk_aid=422636625;dc_trk_cid=103227758;ord=%5Btimestamp%5D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?&obRequestId=1-jO7tfmUmlrmxesSJWSkTCBh2mB-Vj4ExojqCJ3kPaq4SXyyt03hnNcHHR2BLWa&obTimestamp=1543852182837"
+          ],
+          "pos": "5",
+          "ttid": 3,
+          "thumbnail": {
+            "url": "https://images.outbrainimg.com/transform/v3/eyJpdSI6ImVkMzllMmIyYTAwMTA2ZDA5Mzk1ZDZhNjdiYjk3NDhjZDZlZDM3YzQ0ZTY3MjEyNWEwNWJhNDMyNGI0OGIxZTgiLCJ3IjozMDAsImgiOjIyMCwiZCI6Mi4wLCJjcyI6MCwiZiI6MH0.jpg",
+            "width": 300,
+            "height": 220,
+            "imageImpressionType": "DOCUMENT_IMAGE"
+          }
+        }
+      ]
+    },
+    "features": {
+      "smartFeed": {
+        "useBackendFeed": false
+      }
+    },
+    "settings": {
+      "dynamic:PaidLabelTextColor": "#ffffff",
+      "recMode": "sdk_sfd_2_columns",
+      "sdk_sf_vidget_url": "https://static-test.outbrain.com/video/app/vidgetInApp.html",
+      "feedContent": "[{\"type\":\"widget\", \"id\":\"SDK_SFD_1\"},{\"type\":\"widget\", \"id\":\"SDK_SFD_2\"},{\"type\":\"widget\", \"id\":\"SDK_SFD_3\"}]",
+      "apv": true,
+      "DPR": "2.0",
+      "dynamic:PaidLabelBackgroundColor": "#666666",
+      "isSmartFeedInjectionEnabled": true,
+      "listingsViewability": true,
+      "nanoOrganicsHeader": "Sponsored Links",
+      "vidgetProvider": "Aniview",
+      "feedCyclesLimit": 5,
+      "feedLoadChunkSize": 3,
+      "sdk_sf_shadow_color": "#ffa500",
+      "readMoreText": "Read More",
+      "VidgetEnabled": true,
+      "dynamic:PaidLabel": "Sponsored",
+      "vidgetData": "{\"channelId\":\"58a5ae2e073ef42da903a806\", \"playerId\": \"5a9fcd48c5d05d0004922d5d\", \"playMode\":\"load\", \"closeButton\": \"true\", \"retries\": 1 , \"errorLimit\": 1,\"debug\":\"true\"}",
+      "isSmartFeed": true,
+      "dynamic:TitleFontSize": 14,
+      "dynamic:TitleTextStyle": 1,
+      "dynamic:SourceFontSize": 12,
+      "dynamic:SourceColor": "#ffa511",
+      "imgFadeDur": 400,
+      "imgFade": true
+    }
+  }
+}

@@ -14,6 +14,7 @@
 
 RCT_EXPORT_MODULE();
 
+// Make OBEventModule a singleton
 + (id)allocWithZone:(NSZone *)zone {
   static OBEventModule *sharedInstance = nil;
   static dispatch_once_t onceToken;

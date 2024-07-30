@@ -5,15 +5,15 @@
 //  Created by Oren Pinkas on 28/07/2024.
 //
 
-import Foundation
-import UIKit
-import WebKit
 import OutbrainSDK
 
 
 @objc(SFWidgetWrapper)
 class SFWidgetWrapper: UIView, SFWidgetDelegate {
-    
+  // this class has two main functions:
+  // 1. connect the React Native native view interface with SFWidget
+  // 2. implement SFWidgetDelegate for event handling and propagating the events up to RN
+  
   var sfWidget: SFWidget!
   let OBEventModuleInstance = OBEventModule()
   var widgetId: String!
@@ -40,11 +40,6 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   // MARK: - Setup
   
-//  @objc func create(widgetId: String, widgetIndex: NSInteger, articleUrl: String, partnerKey: String, extId: String?, extSecondaryId: String?, pubImpId: String?){
-//    self.widgetId = widgetId
-//    configure(widgetId: widgetId, widgetIndex: widgetIndex, articleUrl: articleUrl, partnerKey: partnerKey, extId: extId, extSecondaryId: extSecondaryId, pubImpId: pubImpId)
-//  }
-  
   @objc func create(args: [String: Any]) {
     guard let widgetId = args["widgetId"] as? String else {
       print("widgetId is missing")
@@ -59,7 +54,7 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
           let widgetIndex = args["widgetIndex"] as? Int,
           let articleUrl = args["articleUrl"] as? String,
           let partnerKey = args["partnerKey"] as? String else {
-      print("Required keys are missing")
+      print("Required widget arguments are missing")
       return
     }
     
@@ -83,7 +78,6 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   
   func onRecClick(_ url: URL) {
-    print("Swift - OnRecClick", url)
     let args: [String: Any] = [
       "widgetId": widgetId!,
       "url": url.absoluteString
@@ -92,7 +86,6 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   
   func didChangeHeight(_ newHeight: CGFloat) {
-    print("Height of SFWidget is \(newHeight)")
     let args: [String: Any] = [
       "widgetId": widgetId!,
       "height": newHeight
@@ -101,7 +94,6 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   
   func onOrganicRecClick(_ url: URL) {
-    print("Swift - onOrganicRecClick")
     let args: [String: Any] = [
       "widgetId": widgetId!,
       "url": url.absoluteString
@@ -110,7 +102,6 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
   }
   
   func widgetEvent(_ eventName: String, additionalData: [String : Any]) {
-      print("Swift - widgetEvent \(eventName)")
       let args: [String: Any] = [
         "widgetId": widgetId!,
         "eventName": eventName,

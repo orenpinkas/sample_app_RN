@@ -34,7 +34,9 @@ export default class OutbrainWidget extends React.Component<OutbrainWidgetProps>
         const {widgetId, widgetIndex, articleUrl, partnerKey, extId, extSecondaryId, pubImpId} = this.props;
         const viewId = findNodeHandle(this._outbrainWidget);
 
-        // dispatch init command with widget properties
+        // dispatch 'create' command to instantiate the native SFWidget with the widget properties
+        // this extra step in necessary because the widget properties cannot be passed at the time of the
+        // native view registration to the Regsitry of React View Manager (in native side)
         UIManager.dispatchViewManagerCommand(
             viewId,
             this.nativeCommandKey,
@@ -81,7 +83,9 @@ export default class OutbrainWidget extends React.Component<OutbrainWidgetProps>
     handleHeightChange(event: any) {
         if (event.widgetId !== this.props.widgetId) return;
 
-        this.setState({ height: event.height });
+        if (event.height > this.state.height) {
+            this.setState({ height: event.height });
+        }
         
         console.log(`${this.props.widgetId}; onHeightChange: ${event.height}`);
         this.handler.onHeightChange?.(event.height);

@@ -2,6 +2,7 @@ import { Platform, requireNativeComponent, UIManager, findNodeHandle, NativeEven
 import React from 'react';
 import {OutbrainWidgetProps, NativeComponentProps, OutbrainWidgetHandler} from './types';
 import DefaultHandler from './DefaultOutbrainWidgetHandler';
+import { version as packageVersion } from '../package.json'
 
 const moduleName = 'SFWidget';  // This should be the name of the native view manager
 
@@ -48,7 +49,8 @@ export default class OutbrainWidget extends React.Component<OutbrainWidgetProps>
                     partnerKey,
                     extId,
                     extSecondaryId,
-                    pubImpId
+                    pubImpId,
+                    packageVersion
                 }
             ]
         );

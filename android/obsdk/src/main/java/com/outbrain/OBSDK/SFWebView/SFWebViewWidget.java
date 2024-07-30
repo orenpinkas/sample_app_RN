@@ -789,12 +789,14 @@ public class SFWebViewWidget extends WebView {
         SFWebViewWidget.paramsDelegateWeakReference = new WeakReference<>(sfWebViewParamsDelegate);
     }
 
-    public static void enableFlutterMode() {
+    public static void enableFlutterMode(String flutter_packageVersion) {
         isFlutter = true;
+        SFWebViewWidget.flutter_packageVersion = flutter_packageVersion;
     }
 
     public static void enableReactNativeMode(String RN_packageVersion) {
         isReactNative = true;
+        SFWebViewWidget.RN_packageVersion = RN_packageVersion;
     }
 
     public static void setHeightDelegateWeakReference(SFWebViewHeightDelegate sfWebViewHeightDelegate) {

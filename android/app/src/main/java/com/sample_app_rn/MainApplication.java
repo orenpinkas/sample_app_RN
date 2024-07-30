@@ -2,6 +2,8 @@ package com.sample_app_rn;
 
 import android.app.Application;
 
+import androidx.annotation.NonNull;
+
 import com.facebook.react.BuildConfig;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
@@ -11,7 +13,6 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.defaults.DefaultReactHost;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
-import com.outbrain.OBSDK.Outbrain;
 
 import java.util.List;
 
@@ -39,6 +40,7 @@ public class MainApplication extends Application implements ReactApplication {
 
     };
 
+    @NonNull
     @Override
     public ReactNativeHost getReactNativeHost() {
         return mReactNativeHost;
@@ -53,6 +55,5 @@ public class MainApplication extends Application implements ReactApplication {
     public void onCreate() {
         super.onCreate();
         SoLoader.init(this, false);
-        Outbrain.register(this, "NANOWDGT01");
     }
 }

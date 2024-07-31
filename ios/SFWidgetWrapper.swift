@@ -53,7 +53,8 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
     guard let widgetId = args["widgetId"] as? String,
           let widgetIndex = args["widgetIndex"] as? Int,
           let articleUrl = args["articleUrl"] as? String,
-          let partnerKey = args["partnerKey"] as? String else {
+          let partnerKey = args["partnerKey"] as? String,
+          let packageVersion = args["packageVersion"] as? String else {
       print("Required widget arguments are missing")
       return
     }
@@ -68,6 +69,7 @@ class SFWidgetWrapper: UIView, SFWidgetDelegate {
     sfWidget.OBPubImp = pubImpId
     
     SFWidget.infiniteWidgetsOnTheSamePage = true
+    SFWidget.enableReactNativeMode(RN_packageVersion: packageVersion)
     sfWidget.enableEvents()
     
     sfWidget.configure(with: self, url: articleUrl, widgetId: widgetId, widgetIndex: widgetIndex, installationKey: partnerKey, userId: nil, darkMode: false, isSwiftUI: true)

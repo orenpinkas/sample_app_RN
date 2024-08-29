@@ -1,0 +1,6 @@
+[submodule "iOS-sdk"]
+	path = iOS-sdk
+	url = https://github.com/outbrain/iOS-sdk.git
+[submodule "outbrain-android-sdk"]
+	path = outbrain-android-sdk
+	url = https://github.com/Cherrypick-Consulting/outbrain-android-sdk.git

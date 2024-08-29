@@ -5,25 +5,32 @@ import {
   findNodeHandle,
   NativeEventEmitter,
   NativeModules,
-  ViewStyle,
-  View,
-  NativeMethods,
+  type ViewStyle,
 } from 'react-native';
 import React from 'react';
-import {
+import type {
   OutbrainWidgetProps,
   NativeComponentProps,
   OutbrainWidgetHandler,
+  OutbrainWidgetDefaultProps,
 } from './types';
 import DefaultHandler from './DefaultOutbrainWidgetHandler';
-import {version as packageVersion} from '../package.json';
-import {useState, useEffect, useRef} from 'react';
+import {packageVersion} from './version';
+import {componentName, LINKING_ERROR} from './constants';
 
-const moduleName = 'SFWidget'; // This should be the name of the native view manager
+const viewManagerConfig = UIManager.getViewManagerConfig(componentName);
+if (viewManagerConfig == null) {
+  throw new Error(LINKING_ERROR);
+}
 
-const NativeSFWidget = requireNativeComponent<NativeComponentProps>(moduleName);
+const NativeSFWidget =
+  requireNativeComponent<NativeComponentProps>(componentName);
 
 class OutbrainWidgetCls extends React.Component<OutbrainWidgetProps> {
+  static defaultProps = {
+    darkMode: false,
+  } as OutbrainWidgetDefaultProps;
+
   private _outbrainWidget: any;
   private eventEmitter: NativeEventEmitter;
   private handler: OutbrainWidgetHandler;
@@ -37,7 +44,7 @@ class OutbrainWidgetCls extends React.Component<OutbrainWidgetProps> {
     super(props);
 
     this.handler = props.handler === undefined ? DefaultHandler : props.handler;
-    this.nativeCommandKey = this.#getNativeCommandKey();
+    this.nativeCommandKey = this.getNativeCommandKey();
     this.eventEmitter = new NativeEventEmitter(NativeModules.OBEventModule);
 
     this.handleHeightChange = this.handleHeightChange.bind(this);
@@ -55,6 +62,7 @@ class OutbrainWidgetCls extends React.Component<OutbrainWidgetProps> {
       extId,
       extSecondaryId,
       pubImpId,
+      darkMode,
     } = this.props;
     const viewId = findNodeHandle(this._outbrainWidget);
 
@@ -70,6 +78,7 @@ class OutbrainWidgetCls extends React.Component<OutbrainWidgetProps> {
         extId,
         extSecondaryId,
         pubImpId,
+        darkMode,
         packageVersion,
       },
     ]);
@@ -146,11 +155,9 @@ class OutbrainWidgetCls extends React.Component<OutbrainWidgetProps> {
     this.handler.onWidgetEvent?.(event.eventName, event.additionalData);
   }
 
-  #getNativeCommandKey() {
-    if (Platform.OS === 'android') {
-      return UIManager.getViewManagerConfig(
-        moduleName,
-      ).Commands.create.toString();
+  getNativeCommandKey() {
+    if (Platform.OS === 'android' && viewManagerConfig?.Commands?.create) {
+      return viewManagerConfig.Commands.create.toString();
     } else {
       return 'create';
     }
@@ -166,127 +173,7 @@ class OutbrainWidgetCls extends React.Component<OutbrainWidgetProps> {
   }
 }
 
-// This is your functional component that wraps the class component
-function OutbrainWidget(props) {
-  const additionalProps = 'React Enthusiast';
-
-  return <OutbrainWidgetCls {...props} name={additionalProps} />;
+// This is a workaround to be able to export the class-based component
+export function OutbrainWidget(props: OutbrainWidgetProps) {
+  return <OutbrainWidgetCls {...props} />;
 }
-
-export default OutbrainWidget;
-
-// export const OutbrainWidget: React.FC<OutbrainWidgetProps> = props => {
-//   const {
-//     widgetId,
-//     widgetIndex,
-//     articleUrl,
-//     partnerKey,
-//     extId,
-//     extSecondaryId,
-//     pubImpId,
-//     handler = {},
-//   } = props;
-
-//   const [height, setHeight] = useState(300);
-//   const outbrainWidgetRef = useRef(null);
-//   const eventEmitterRef = useRef<NativeEventEmitter | null>(null);
-
-//   const getNativeCommandKey = () => {
-//     if (Platform.OS === 'android' && viewManagerConfig?.Commands?.create) {
-//       return viewManagerConfig.Commands.create.toString();
-//     } else {
-//       return 'create';
-//     }
-//   };
-
-//   const handleHeightChange = (event: any) => {
-//     if (event.widgetId !== widgetId) {
-//       return;
-//     }
-//     if (event.height > height) {
-//       setHeight(event.height);
-//     }
-//     console.log(`${widgetId}; onHeightChange: ${event.height}`);
-//     handler.onHeightChange?.(event.height);
-//   };
-
-//   const handleRecClick = (event: any) => {
-//     if (event.widgetId !== widgetId) {
-//       return;
-//     }
-//     console.log(`${widgetId}; onRecClick`);
-//     handler.onRecClick?.(event.url);
-//   };
-
-//   const handleOrganicRecClick = (event: any) => {
-//     if (event.widgetId !== widgetId) {
-//       return;
-//     }
-//     console.log(`${widgetId}; onOrganicRecClick`);
-//     handler.onOrganicClick?.(event.url);
-//   };
-
-//   const handleWidgetEvent = (event: any) => {
-//     if (event.widgetId !== widgetId) {
-//       return;
-//     }
-//     console.log(`${widgetId}; onWidgetEvent: ${event.eventName}`);
-//     handler.onWidgetEvent?.(event.eventName, event.additionalData);
-//   };
-
-//   useEffect(() => {
-//     const nativeCommandKey = getNativeCommandKey();
-//     eventEmitterRef.current = new NativeEventEmitter(
-//       NativeModules.OBEventModule,
-//     );
-
-//     const viewId = findNodeHandle(outbrainWidgetRef.current);
-//     if (viewId) {
-//       UIManager.dispatchViewManagerCommand(viewId, nativeCommandKey, [
-//         {
-//           widgetId,
-//           widgetIndex,
-//           articleUrl,
-//           partnerKey,
-//           extId,
-//           extSecondaryId,
-//           pubImpId,
-//           packageVersion,
-//         },
-//       ]);
-//     }
-
-//     const events = [
-//       {name: 'didChangeHeight', handler: handleHeightChange},
-//       {name: 'onRecClick', handler: handleRecClick},
-//       {name: 'onOrganicRecClick', handler: handleOrganicRecClick},
-//       {name: 'onWidgetEvent', handler: handleWidgetEvent},
-//     ];
-
-//     events.forEach(event => {
-//       eventEmitterRef.current?.addListener(event.name, event.handler);
-//     });
-
-//     return () => {
-//       events.forEach(event => {
-//         eventEmitterRef.current?.removeAllListeners(event.name);
-//       });
-//     };
-//   }, [
-//     widgetId,
-//     widgetIndex,
-//     articleUrl,
-//     partnerKey,
-//     extId,
-//     extSecondaryId,
-//     pubImpId,
-//     handleHeightChange,
-//     handleRecClick,
-//     handleOrganicRecClick,
-//     handleWidgetEvent,
-//   ]);
-
-//   return <NativeSFWidget ref={outbrainWidgetRef} style={{height}} />;
-// };
-
-// export default OutbrainWidget;

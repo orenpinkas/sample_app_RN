@@ -12,10 +12,9 @@ import com.facebook.react.uimanager.ViewGroupManager;
 import java.util.Map;
 
 public class SFWebViewWidgetManager extends ViewGroupManager<SFWebViewWidgetWrapper> {
-    public static final String REACT_CLASS = "SFWidget";
+    public static final String REACT_CLASS = "SFWidgetNative";
     public static final String COMMAND_CREATE_NAME = "create";
     public static final int COMMAND_CREATE_ID = 1;
-
 
     @NonNull
     @Override

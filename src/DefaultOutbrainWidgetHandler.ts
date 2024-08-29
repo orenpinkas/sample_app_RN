@@ -1,15 +1,15 @@
-import { OutbrainWidgetHandler } from './types';
-import OBInAppBrowser from './OBInAppBrowser';
+import type {OutbrainWidgetHandler} from './types';
+import {OBInAppBrowser} from './OBInAppBrowser';
 
 const DefaultHandler: OutbrainWidgetHandler = {
-    onHeightChange: (newHeight) => {},
-    onRecClick: (url) => {
-      OBInAppBrowser.open(url);
-    },
-    onOrganicClick: (url) => {
-      OBInAppBrowser.open(url);
-    },
-    onWidgetEvent: (eventName, data) => {}
+  onHeightChange: _newHeight => {},
+  onRecClick: url => {
+    OBInAppBrowser.open(url);
+  },
+  onOrganicClick: url => {
+    OBInAppBrowser.open(url);
+  },
+  onWidgetEvent: (_eventName, _data) => {},
 };
 
 export default DefaultHandler;

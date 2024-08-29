@@ -17,7 +17,6 @@ public class OutbrainNativePackage implements ReactPackage {
     @Override
     public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
         List<ViewManager> viewManagers = new ArrayList<>();
-        viewManagers.add(new TestNativeViewManager());
         viewManagers.add(new SFWebViewWidgetManager());
         return viewManagers;
     }

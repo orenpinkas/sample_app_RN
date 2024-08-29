@@ -62,10 +62,16 @@ class SFWebViewJSInterface {
                 mSFWebViewWidget.notifyHeightChanged(heightInt);
             }
             if (result.has("bridgeParams")) {
-                OutbrainBusProvider.BridgeParamsEvent bridgeParamsEvent = new OutbrainBusProvider.BridgeParamsEvent(result.getString("bridgeParams"));
-                Log.i(LOG_TAG, "OutbrainBusProvider post bridgeParamsEvent: " + bridgeParamsEvent.getBridgeParams());
-                OutbrainBusProvider.getInstance().post(bridgeParamsEvent);
-                SFWebViewWidget.globalBridgeParams = bridgeParamsEvent.getBridgeParams();
+                String bridgeParamsValue = result.optString("bridgeParams", "");
+                if (bridgeParamsValue.length() > 0) {
+                    OutbrainBusProvider.BridgeParamsEvent bridgeParamsEvent = new OutbrainBusProvider.BridgeParamsEvent(bridgeParamsValue);
+                    Log.i(LOG_TAG, "OutbrainBusProvider post bridgeParamsEvent: " + bridgeParamsEvent.getBridgeParams());
+                    OutbrainBusProvider.getInstance().post(bridgeParamsEvent);
+                    SFWebViewWidget.globalBridgeParams = bridgeParamsEvent.getBridgeParams();
+                }
+                else {
+                    Log.i(LOG_TAG, "JavascriptInterface: " + widgetID + ", received empty bridgeParams");
+                }
             }
             if (result.has("url")) {
                 String url = result.getString("url");
@@ -83,6 +89,13 @@ class SFWebViewJSInterface {
                 eventName = (eventName != null) ? eventName : "event_name_missing";
                 eventData.remove("name");
                 this.mSFWebViewWidget.handleWidgetEvent(eventName, eventData);
+            }
+            if (result.has("feedEnd")) {
+                boolean feedEnd = result.getBoolean("feedEnd");
+                String parentWidgetId = result.optString("parentWidgetId", "");
+                if (feedEnd && parentWidgetId.equals(this.mSFWebViewWidget.getWidgetID())) {
+                    this.mSFWebViewWidget.setFeedEnd(true);
+                }
             }
             if (result.has("errorMsg")) {
                 String errorMsg = result.optString("errorMsg");

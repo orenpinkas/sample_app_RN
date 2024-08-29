@@ -9,7 +9,6 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.net.Uri;
-import android.net.http.SslError;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.AttributeSet;
@@ -17,7 +16,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.webkit.SslErrorHandler;
 import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -44,6 +42,7 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Map;
 
 import static com.outbrain.OBSDK.OBUtils.getAppIdentifier;
 import static com.outbrain.OBSDK.OBUtils.getApplicationName;
@@ -53,10 +52,13 @@ import static com.outbrain.OBSDK.OBUtils.runOnMainThread;
 public class SFWebViewWidget extends WebView {
     private final WeakReference<Context> ctxRef;
     private String URL;
+    public String webviewUrl;
     private String widgetID;
     private int widgetIndex;
     private String installationKey;
     private boolean darkMode;
+
+    private boolean feedEnd;
     public static boolean isWidgetEventsEnabled;
     public static boolean isWidgetEventsTestMode;
     public static boolean shouldCollapseOnError;
@@ -311,15 +313,15 @@ public class SFWebViewWidget extends WebView {
     }
 
     private void loadOutbrainURLOnMainThread(Context ctx) {
-        final String url = buildWidgetUrl(ctx);
+        this.webviewUrl = buildWidgetUrl(ctx);
 
         Handler mainHandler = new Handler(ctx.getMainLooper());
         Runnable myRunnable = new Runnable() {
             @Override
             public void run() {
                 setWebViewSettings();
-                Log.i(LOG_TAG, "WebView loadUrl() --> " + url);
-                SFWebViewWidget.this.loadUrl(url);
+                Log.i(LOG_TAG, "WebView loadUrl() --> " + webviewUrl);
+                SFWebViewWidget.this.loadUrl(webviewUrl);
             }
         };
         mainHandler.post(myRunnable);
@@ -396,6 +398,10 @@ public class SFWebViewWidget extends WebView {
     }
 
     public void loadMore() {
+        if (feedEnd) {
+            Log.i(LOG_TAG, "load more - SKIPPED, feed load completed. " + this.widgetID);
+            return;
+        }
         if (!isLoadingMoreItems) {
             isLoadingMoreItems = true;
             evaluateLoadMoreScript();
@@ -459,7 +465,7 @@ public class SFWebViewWidget extends WebView {
     }
 
     @SuppressLint({"AddJavascriptInterface", "SetJavaScriptEnabled"})
-    private void setWebViewSettings() {
+    protected void setWebViewSettings() {
         this.getSettings().setLoadsImagesAutomatically(true);
         this.getSettings().setLoadWithOverviewMode(true);
         this.getSettings().setJavaScriptEnabled(true);
@@ -482,7 +488,7 @@ public class SFWebViewWidget extends WebView {
 
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("https");
-        builder.appendPath("widgets.outbrain.com");
+        builder.authority("widgets.outbrain.com");
         builder.appendPath("reactNativeBridge");
         builder.appendPath("index.html");
 
@@ -757,6 +763,14 @@ public class SFWebViewWidget extends WebView {
         } else {
             Log.e(LOG_TAG,"click on invalid url - " + url);
         }
+    }
+
+    public void setFeedEnd(boolean feedEnd) {
+        this.feedEnd = feedEnd;
+    }
+
+    public String getWidgetID() {
+        return widgetID;
     }
 
     void handleWidgetEvent(String eventName, JSONObject additionalData) {

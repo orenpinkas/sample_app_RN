@@ -95,13 +95,7 @@ public class FetchRecommendationsHandler implements Runnable {
             }
 
             String responseString = response.body().string();
-
-
-            /// Oded Mock
-            // responseString = readJsonFromMockFile(R.raw.smart_feed_response_weekly_highlights);
-            // responseString = readJsonFromMockFile(R.raw.smart_feed_response_branded_carousel);
-            // responseString = readJsonFromMockFile(R.raw.smart_feed_response_app_install);
-
+            
             if (!response.isSuccessful()) {
                 OBError obError = OBRecommendationsParser.parseError(responseString);
                 String msg;

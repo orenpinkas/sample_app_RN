@@ -2,7 +2,7 @@
 
 # Replace this with the path to the source folder
 iOS_SOURCE_FOLDER="./iOS-sdk/SwiftSDK-sources"
-android_SOURCE_FOLDER="./outbrain-android-sdk/catalog-app/obsdk"
+android_SOURCE_FOLDER="./outbrain-android-sdk/outbrain-sdk/obsdk"
 
 # Replace this with the path to the destination parent directory
 iOS_DESTINATION_PARENT="./ios/Runner"
